@@ -26,6 +26,7 @@ import com.wzdq.fengcai.module.mine.provide.ProvideForAgedActivity;
 import com.wzdq.fengcai.module.mine.service.ServiceCenterActivity;
 import com.wzdq.fengcai.module.mine.setting.SettingActivity;
 import com.wzdq.fengcai.module.mine.shareholder.ApplyBecomeShareholderOfUserActivity;
+import com.wzdq.fengcai.module.mine.shareholder.ShareholderSystemActivity;
 import com.wzdq.fengcai.module.mine.userinfo.EditorUserInfoActivity;
 import com.wzdq.fengcai.module.shop.ConversionRecordActivity;
 import com.wzdq.fengcai.module.shop.ShoppingCartActivity;
@@ -168,6 +169,9 @@ public class MineFragment extends BaseFragment {
                         break;
                     case "市场拓展":
                         startActivity(PersonExpandActivity.class);
+                        break;
+                    case "股东分润":
+                        startActivity(ShareholderSystemActivity.class);
                         break;
                 }
             }

@@ -21,12 +21,17 @@ public class LinearDividerItemDecoration extends Y_DividerItemDecoration {
     int dividerColor;
     private int orientation = LinearLayoutManager.VERTICAL;
     private RecyclerView mRecyclerView;
+    private int divideLocation;
+    public static final int DIVIDE_LOCATION_LEFT = 0;
+    public static final int DIVIDE_LOCATION_TOP = 1;
+    public static final int DIVIDE_LOCATION_RIGHT = 2;
+    public static final int DIVIDE_LOCATION_BOTTOM = 3;
 
     public LinearDividerItemDecoration(Context context) {
         super(context);
     }
 
-    public LinearDividerItemDecoration(RecyclerView recyclerView, int dividerWidth, int dividerColor) {
+    public LinearDividerItemDecoration(RecyclerView recyclerView, int dividerWidth, int dividerColor,int divideLocation) {
         super(recyclerView.getContext());
         mRecyclerView = recyclerView;
         this.dividerWidth = dividerWidth;
@@ -42,13 +47,27 @@ public class LinearDividerItemDecoration extends Y_DividerItemDecoration {
         IAdapter adapter = (IAdapter) mRecyclerView.getAdapter();
         if (adapter.isContentView(itemPosition) && itemPosition < adapter.getDataSize()) {
             if (orientation == LinearLayoutManager.VERTICAL) {
-                divider = new Y_DividerBuilder()
-                        .setBottomSideLine(dividerWidth != 0, dividerColor, dividerWidth, 0, 0)
-                        .create();
+                if (divideLocation == DIVIDE_LOCATION_BOTTOM){
+                    divider = new Y_DividerBuilder()
+                            .setBottomSideLine(dividerWidth != 0, dividerColor, dividerWidth, 0, 0)
+                            .create();
+                } else {
+                    divider = new Y_DividerBuilder()
+                            .setTopSideLine(dividerWidth != 0, dividerColor, dividerWidth, 0, 0)
+                            .create();
+                }
+
             } else {
-                divider = new Y_DividerBuilder()
-                        .setRightSideLine(dividerWidth != 0, dividerColor, dividerWidth, 0, 0)
-                        .create();
+                if (divideLocation == DIVIDE_LOCATION_RIGHT){
+                    divider = new Y_DividerBuilder()
+                            .setRightSideLine(dividerWidth != 0, dividerColor, dividerWidth, 0, 0)
+                            .create();
+                } else {
+                    divider = new Y_DividerBuilder()
+                            .setLeftSideLine(dividerWidth != 0, dividerColor, dividerWidth, 0, 0)
+                            .create();
+                }
+
             }
         }
 

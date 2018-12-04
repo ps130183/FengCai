@@ -69,6 +69,10 @@ public class MRecyclerView<D> extends FrameLayout {
     private int dividerWidth;
     private @ColorInt int dividerColor;
 
+    //分割线位置  位于 itemView 的 top bottom right left
+    private int divideLocation;
+
+
     private int adapterType;
 
     //下拉刷新
@@ -93,8 +97,15 @@ public class MRecyclerView<D> extends FrameLayout {
         loadMoreErrorRes = ta.getResourceId(R.styleable.MRecyclerView_loadMoreErrorLayout,R.layout.mr_load_more_error);
         emptyRes = ta.getResourceId(R.styleable.MRecyclerView_emptyLayout,-1);
         lmType = ta.getInt(R.styleable.MRecyclerView_lmType,LM_LINEAR);
-        if (lmType == 0){
+        if (lmType == LM_LINEAR){
             orientation = ta.getInt(R.styleable.MRecyclerView_orientation, ORIENTATION_VERTICAL);
+            int defaultLocation = -1;
+            if (orientation == ORIENTATION_VERTICAL){
+                defaultLocation = LinearDividerItemDecoration.DIVIDE_LOCATION_BOTTOM;
+            } else {
+                defaultLocation = LinearDividerItemDecoration.DIVIDE_LOCATION_RIGHT;
+            }
+            divideLocation = ta.getInt(R.styleable.MRecyclerView_divideLocation,defaultLocation);
         }
         spanCount = ta.getInteger(R.styleable.MRecyclerView_spanCount,2);
         dividerWidth = ta.getDimensionPixelSize(R.styleable.MRecyclerView_dividerWidth, 1);
@@ -102,6 +113,9 @@ public class MRecyclerView<D> extends FrameLayout {
 
         adapterType = ta.getInt(R.styleable.MRecyclerView_adapterType,ADAPTER_DEFAULT);
         isRefresh = ta.getBoolean(R.styleable.MRecyclerView_refresh,false);
+
+
+
         initRecycler();
     }
 
@@ -133,7 +147,7 @@ public class MRecyclerView<D> extends FrameLayout {
     public MRecyclerView<D> refreshRecycler(){
         if (lmType == LM_LINEAR){
             addLinearLayoutManager(orientation == ORIENTATION_VERTICAL ? LinearLayoutManager.VERTICAL : LinearLayoutManager.HORIZONTAL);
-            mRecyclerView.addItemDecoration(new LinearDividerItemDecoration(mRecyclerView,dividerWidth,dividerColor));
+            mRecyclerView.addItemDecoration(new LinearDividerItemDecoration(mRecyclerView,dividerWidth,dividerColor,divideLocation));
         } else if (lmType == LM_GRID){
             addGridLayoutManager(spanCount);
             mRecyclerView.addItemDecoration(new GridDividerItemDecotation(mRecyclerView,

@@ -5,6 +5,7 @@
     <color name="colorAccent">#FFB604</color>
 
     <color name="colorBlueRgb3285ff">#3285ff</color>
+    <color name="colorBlueRgb04A9FF">#04A9FF</color>
     <color name="divide_color">#efeff4</color>
     <color name="divideColorRgbE8E8E8">#E8E8E8</color>
 
@@ -34,6 +35,7 @@
     <color name="colorBlockRgbB3B3B3">#B3B3B3</color>
     <color name="colorBlockRgbBBBBBB">#BBBBBB</color>
     <color name="colorBlockRgbCCCCCC">#CCCCCC</color>
+    <color name="colorBlockRgbFEFEFE">#FEFEFE</color>
 
     <color name="colorRedRgbE43E44">#E43E44</color>
 
