@@ -326,13 +326,20 @@ public class MTextView extends AppCompatTextView {
      * 开始倒计时
      */
     public void startCountDown(){
-        if (countDownTime <= 0){
+        if (countDownTime <= 0 || mCountDownThread != null){
             return;
         }
-        setEnabled(false);
-        setTextColor(afterSendTextColor);
-        mCountDownThread = new CountDownThread();
-        mCountDownThread.start();
+
+        if (onStartCountDownTimeListener != null){
+            onStartCountDownTimeListener.start();
+            setEnabled(false);
+            setTextColor(afterSendTextColor);
+            mCountDownThread = new CountDownThread();
+            mCountDownThread.start();
+        } else {
+            throw new NotFoundOnStartCountDownTimeListenerException();
+        }
+
     }
 
     @Override
@@ -398,8 +405,24 @@ public class MTextView extends AppCompatTextView {
         }
     }
 
+
     public void setImageIcon(int imageIcon) {
         this.imageIcon = imageIcon;
         invalidate();
+    }
+
+    public interface OnStartCountDownTimeListener{
+        void start();
+    }
+    private OnStartCountDownTimeListener onStartCountDownTimeListener;
+
+    public void setOnStartCountDownTimeListener(OnStartCountDownTimeListener onStartCountDownTimeListener) {
+        this.onStartCountDownTimeListener = onStartCountDownTimeListener;
+    }
+
+    public class NotFoundOnStartCountDownTimeListenerException extends RuntimeException{
+        public NotFoundOnStartCountDownTimeListenerException() {
+            super("找不到倒计时监听器，请添加倒计时监听器");
+        }
     }
 }

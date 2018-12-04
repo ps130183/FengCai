@@ -1,5 +1,6 @@
 package com.wzdq.fengcai.module.login;
 
+import android.content.Intent;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -48,6 +49,16 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener,
     @Override
     public void onFinally(@Nullable Bundle savedInstanceState) {
         initView();
+    }
+
+    @Override
+    protected void onNewIntent(Intent intent) {
+        super.onNewIntent(intent);
+
+        String account = intent.getStringExtra("account");
+        if (!TextUtils.isEmpty(account)){
+            mViewManager.setText(R.id.etAccount,account);
+        }
     }
 
     private void initView(){
@@ -126,7 +137,11 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener,
 
     @Override
     public void startForgetPassword() {
-        startActivity(ForgetPasswordActivity.class);
+        EditText etAccount = mViewManager.findView(R.id.etAccount);
+        String account = etAccount.getText().toString();
+        Bundle bundle = new Bundle();
+        bundle.putString("account",account);
+        startActivity(ForgetPasswordActivity.class,bundle);
     }
 
     @Override

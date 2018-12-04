@@ -33,6 +33,10 @@ public class ActivatePresenterImpl extends BasePresenter<IActivateContract.IActi
             getView().showError("请填写正确的手机号");
             isActivate = false;
         }
+
+        if (!isActivate){
+            hideLoading();
+        }
         return isActivate;
     }
 

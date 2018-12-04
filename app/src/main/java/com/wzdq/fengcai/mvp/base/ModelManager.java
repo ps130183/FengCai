@@ -50,6 +50,11 @@ public class ModelManager {
         public static final String MODEL_LOGIN = MODEL_DEFAULT_ROOT + ".login.LoginModelImpl";
         //激活账号
         public static final String MODEL_ACTIVATE_ACCOUNT = MODEL_DEFAULT_ROOT + ".login.activate.ActivateModelImpl";
+        //修改密码
+        public static final String MODEL_FORGET_PWD = MODEL_DEFAULT_ROOT + ".login.forgetpwd.ForgetPasswordModelImpl";
+
+        //获取手机的相关 操作 例如短信验证码
+        public static final String MODEL_PHONE = MODEL_DEFAULT_ROOT + ".phone.PhoneModelImpl";
         //首页商城
         public static final String MODEL_SHOPPING = MODEL_DEFAULT_ROOT + ".shop.ShoppingModel";
         //购物车

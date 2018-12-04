@@ -48,6 +48,16 @@ public interface ApiService {
                                                    @Field("payPwd") String payPwd);
 
     /**
+     * 找回密码 修改密码
+     * @param userName
+     * @param userPwd
+     * @return
+     */
+    @FormUrlEncoded
+    @POST(ApiConstant.API_MODEL + "Fcai/app/user/retrievepwd")
+    Observable<Response<String>> doModifyPassword(@Field("userName") String userName,
+                                                  @Field("userPwd") String userPwd);
+    /**
      * 上传图片
      *
      * @param file

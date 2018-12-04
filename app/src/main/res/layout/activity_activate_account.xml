@@ -68,6 +68,7 @@
         android:layout_height="wrap_content"
         android:text="发送验证码"
         app:afterSendText="重新发送"
+        app:afterSendTextColor="@color/colorBlockRgbAAAAAA"
         android:textColor="@color/colorAccent"
         app:layout_constraintBaseline_toBaselineOf="@id/phoneHint"
         app:layout_constraintRight_toRightOf="@id/bgView"
@@ -208,6 +209,7 @@
         app:layout_constraintBaseline_toBaselineOf="@id/newPasswordHint"
         app:layout_constraintRight_toRightOf="@id/bgView"
         android:layout_marginRight="15dp"
+        android:inputType="textPassword"
         style="@style/singleLine"/>
 
     <TextView
@@ -237,6 +239,7 @@
         app:layout_constraintBaseline_toBaselineOf="@id/doubleNewPasswordHint"
         app:layout_constraintRight_toRightOf="@id/bgView"
         android:layout_marginRight="15dp"
+        android:inputType="textPassword"
         style="@style/singleLine"/>
 
     <android.support.constraint.Barrier
