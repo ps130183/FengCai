@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/addAddress"
+    android:layout_width="match_parent"
+    android:layout_height="44dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardBackgroundColor="@color/colorWhite"
+    android:layout_margin="15dp"
+    app:cardElevation="5dp">
+
+    <com.wzdq.fengcai.view.MTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="添加收货地址"
+        android:textSize="@dimen/textSize15"
+        android:textColor="@color/colorAccent"
+        android:gravity="center_vertical"
+        app:imageIcon="@mipmap/icon_add_yellow"
+        android:layout_gravity="center"
+        app:imageHeight="30dp"
+        app:imageWidth="30dp"
+        app:imageDirection="imageToLeft"
+        />
+
+</android.support.v7.widget.CardView>

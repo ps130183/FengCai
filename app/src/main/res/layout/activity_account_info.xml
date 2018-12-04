@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.wzdq.fengcai.module.mine.account.AccountInfoActivity">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="20dp">
+
+        <View
+            android:id="@+id/bgView"
+            android:layout_width="0dp"
+            android:layout_height="190dp"
+            android:background="@color/colorWhite"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3000"
+            android:textSize="56sp"
+            android:textColor="@color/colorRedRgbE43E44"
+            app:layout_constraintLeft_toLeftOf="@+id/bgView"
+            app:layout_constraintRight_toRightOf="@+id/bgView"
+            app:layout_constraintTop_toTopOf="@+id/bgView"
+            app:layout_constraintBottom_toBottomOf="@+id/bgView"
+            app:layout_constraintVertical_bias="0.2"
+            android:shadowColor="#FF855F"
+            android:shadowDx="0"
+            android:shadowDy="8"
+            android:shadowRadius="2.5"
+            />
+
+        <ImageView
+            android:id="@+id/moneyArrow"
+            android:layout_width="36dp"
+            android:layout_height="30dp"
+            android:src="@mipmap/icon_account_money"
+            app:layout_constraintTop_toBottomOf="@id/money"
+            app:layout_constraintBottom_toTopOf="@id/tvMoneyHint"
+            app:layout_constraintLeft_toLeftOf="@id/money"
+            app:layout_constraintRight_toRightOf="@id/money"/>
+
+        <TextView
+            android:id="@+id/tvMoneyHint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="奖金余额"
+            android:textSize="@dimen/textSize16"
+            android:textColor="@color/colorBlockRgb666666"
+            app:layout_constraintLeft_toLeftOf="@+id/bgView"
+            app:layout_constraintRight_toRightOf="@+id/bgView"
+            app:layout_constraintTop_toBottomOf="@+id/moneyArrow"
+            app:layout_constraintBottom_toBottomOf="@+id/bgView"
+            app:layout_constraintVertical_bias="0"/>
+
+        <View
+            android:id="@+id/divideLine2"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="@color/divide_color"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bgView"
+            app:layout_constraintBottom_toTopOf="@+id/divideLine1"
+            app:layout_constraintVertical_chainStyle="spread_inside"/>
+
+        <View
+            android:id="@+id/divideLine1"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="@color/divide_color"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/bgView2"
+            app:layout_constraintTop_toBottomOf="@+id/divideLine2"/>
+
+
+        <View
+            android:id="@+id/divideLine3"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="@color/divide_color"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bgView2"/>
+
+        <View
+            android:id="@+id/bgView2"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:background="@color/colorWhite"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bgView"
+            android:layout_marginTop="15dp"/>
+
+        <View
+            android:id="@+id/divideLine"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="@color/divide_color"
+            app:layout_constraintLeft_toLeftOf="@+id/bgView2"
+            app:layout_constraintRight_toRightOf="@+id/bgView2"
+            app:layout_constraintTop_toTopOf="@+id/bgView2"
+            app:layout_constraintBottom_toBottomOf="@+id/bgView2"/>
+
+        <com.wzdq.fengcai.view.MTextView
+            android:id="@+id/accountDetail"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="账单明细"
+            android:gravity="center_vertical"
+            android:padding="@dimen/textSize16"
+            android:textSize="@dimen/textSize14"
+            app:imageIcon="@mipmap/icon_arrow_right"
+            app:imageWidth="18dp"
+            app:imageHeight="18dp"
+            app:imageDirection="imageToRight"
+            android:textColor="@color/colorBlockRgb191919"
+            app:layout_constraintLeft_toLeftOf="@+id/bgView2"
+            app:layout_constraintRight_toRightOf="@+id/bgView2"
+            app:layout_constraintTop_toTopOf="@+id/bgView2"
+            app:layout_constraintBottom_toTopOf="@+id/divideLine"/>
+
+        <com.wzdq.fengcai.view.MTextView
+            android:id="@+id/myBank"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="我的银行卡"
+            android:gravity="center_vertical"
+            android:padding="@dimen/textSize16"
+            android:textSize="@dimen/textSize14"
+            android:textColor="@color/colorBlockRgb191919"
+            app:imageIcon="@mipmap/icon_arrow_right"
+            app:imageWidth="18dp"
+            app:imageHeight="18dp"
+            app:imageDirection="imageToRight"
+            app:layout_constraintLeft_toLeftOf="@+id/bgView2"
+            app:layout_constraintRight_toRightOf="@+id/bgView2"
+            app:layout_constraintBottom_toBottomOf="@+id/bgView2"
+            app:layout_constraintTop_toBottomOf="@+id/divideLine"/>
+
+
+
+        <TextView
+            android:id="@+id/noBankCard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="未添加"
+            android:textSize="@dimen/textSize14"
+            android:textColor="@color/colorRedRgbE43E44"
+            app:layout_constraintRight_toRightOf="@+id/myBank"
+            app:layout_constraintTop_toTopOf="@+id/myBank"
+            app:layout_constraintBottom_toBottomOf="@+id/myBank"
+            android:layout_marginRight="40dp"/>
+
+        <Button
+            android:id="@+id/btnConvertMoney"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/btnWithdraw"
+            app:layout_constraintTop_toBottomOf="@+id/bgView2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginTop="76dp"
+            android:background="@drawable/selector_button_corners_20"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:text="转币"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/textSize18"
+            android:layout_marginBottom="20dp"
+            android:visibility="visible"
+            />
+
+        <Button
+            android:id="@+id/btnWithdraw"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toRightOf="@+id/btnConvertMoney"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bgView2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginTop="76dp"
+            android:background="@drawable/selector_button_corners_20"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:text="提现"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/textSize18"
+            android:layout_marginBottom="20dp"
+            />
+    </android.support.constraint.ConstraintLayout>
+
+</ScrollView>

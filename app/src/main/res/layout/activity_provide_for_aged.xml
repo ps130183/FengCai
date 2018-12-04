@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.wzdq.fengcai.module.mine.provide.ProvideForAgedActivity">
+
+    <View
+        android:id="@+id/bgView"
+        android:layout_width="0dp"
+        android:layout_height="150dp"
+        android:background="@color/colorWhite"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="养老补贴余额（元）"
+        android:textSize="@dimen/textSize14"
+        android:textColor="@color/colorBlockRgb555555"
+        app:layout_constraintLeft_toLeftOf="@id/bgView"
+        app:layout_constraintRight_toRightOf="@id/bgView"
+        app:layout_constraintTop_toTopOf="@id/bgView"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="15dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="50000"
+        android:textColor="@color/colorRedRgbE43E44"
+        android:textSize="40sp"
+        app:layout_constraintLeft_toLeftOf="@id/bgView"
+        app:layout_constraintRight_toRightOf="@id/bgView"
+        app:layout_constraintTop_toTopOf="@id/bgView"
+        app:layout_constraintBottom_toBottomOf="@id/bgView"
+        android:shadowColor="#FF855F"
+        android:shadowDx="0"
+        android:shadowDy="8"
+        android:shadowRadius="2.5"
+        />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@color/divide_color"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/bgView"/>
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@color/divide_color"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/bgView2"/>
+
+    <View
+        android:id="@+id/bgView2"
+        android:layout_width="0dp"
+        android:layout_height="44dp"
+        android:background="@color/colorWhite"
+        app:layout_constraintTop_toBottomOf="@id/bgView"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="10dp"/>
+
+    <View
+        android:id="@+id/divideLine"
+        android:layout_width="5dp"
+        android:layout_height="18dp"
+        android:background="@drawable/shape_divide_line"
+        app:layout_constraintTop_toTopOf="@id/bgView2"
+        app:layout_constraintBottom_toBottomOf="@id/bgView2"
+        app:layout_constraintLeft_toLeftOf="@id/bgView2"
+        android:layout_marginLeft="15dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="养老补贴明细"
+        android:textSize="@dimen/textSize16"
+        android:textColor="@color/colorBlockRgb323232"
+        app:layout_constraintTop_toTopOf="@id/divideLine"
+        app:layout_constraintBottom_toBottomOf="@id/divideLine"
+        app:layout_constraintLeft_toRightOf="@id/divideLine"
+        android:layout_marginLeft="8dp"/>
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@color/divide_color"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/recyclerView"/>
+
+    <com.ps.mrcyclerview.MRecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:dividerWidth="0dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/bgView2"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+    </com.ps.mrcyclerview.MRecyclerView>
+
+</android.support.constraint.ConstraintLayout>

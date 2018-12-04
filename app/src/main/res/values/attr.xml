@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="FloatingShoppingCartView">
+        <attr name="image_src" format="reference"/>
+        <attr name="circle_radius" format="dimension"/>
+        <attr name="shadow_radius" format="float"/>
+        <attr name="shadow_color" format="color"/>
+    </declare-styleable>
+
+    <declare-styleable name="MTextView">
+        <attr name="imageIcon" format="reference"/>
+        <attr name="imageWidth" format="dimension"/>
+        <attr name="imageHeight" format="dimension"/>
+        <attr name="imageDirection">
+            <enum name="imageToLeft" value="0"/>
+            <enum name="imageToTop" value="1"/>
+            <enum name="imageToRight" value="2"/>
+            <enum name="imageToBottom" value="3"/>
+        </attr>
+        <attr name="borderWidth" format="dimension"/>
+        <attr name="borderColor" format="color"/>
+        <attr name="borderCorner" format="dimension"/>
+        <attr name="followTextColor" format="boolean"/>
+        <attr name="afterSendText" format="string"/>
+        <attr name="afterSendTextColor" format="color"/>
+        <attr name="countDownTime" format="integer"/>
+        <attr name="backgroundType">
+            <enum name="def" value="0"/>
+            <enum name="circle" value="1"/>
+        </attr>
+        <attr name="backgroundColor" format="color"/>
+
+        <attr name="radiusLeftTop" format="dimension"/>
+        <attr name="radiusRightTop" format="dimension"/>
+        <attr name="radiusLeftBottom" format="dimension"/>
+        <attr name="radiusRightBottom" format="dimension"/>
+    </declare-styleable>
+
+    <declare-styleable name="StepView">
+        <attr name="step_dot_radius" format="dimension"/>
+        <attr name="step_space" format="dimension"/>
+        <attr name="step_text_size" format="dimension"/>
+        <attr name="step_text_color" format="color"/>
+        <attr name="step_intro_text_size" format="dimension"/>
+        <attr name="step_check_color" format="color"/>
+        <attr name="step_not_check_color" format="color"/>
+    </declare-styleable>
+
+    <declare-styleable name="DivideLine">
+        <attr name="divideStroke" format="dimension"/>
+        <attr name="divideColor" format="color"/>
+        <attr name="divideDirector">
+            <enum name="vertical" value="0"/>
+            <enum name="horizontal" value="1"/>
+        </attr>
+        <attr name="divideInterval" format="dimension"/>
+        <attr name="dashedLength" format="dimension"/>
+    </declare-styleable>
+
+</resources>

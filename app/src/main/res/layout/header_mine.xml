@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <View
+        android:id="@+id/bgView"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:background="@drawable/shape_mine_header"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/bgView3"
+        android:layout_marginBottom="15dp"/>
+
+    <com.ps.glidelib.GlideImageView
+        android:id="@+id/userPortrait"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="54dp"
+        android:src="@drawable/protrait"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bgView"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.082"
+        app:siv_border_color="#19000000"
+        app:siv_border_width="3dp"
+        app:siv_shape_type="circle" />
+
+    <TextView
+        android:id="@+id/userName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:text="宋宝杰"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/textSize16"
+        app:layout_constraintBottom_toTopOf="@+id/guideline"
+        app:layout_constraintLeft_toRightOf="@+id/userPortrait" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="156****2345"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/textSize12"
+        app:layout_constraintLeft_toLeftOf="@+id/userName"
+        app:layout_constraintLeft_toRightOf="@+id/userPortrait"
+        app:layout_constraintTop_toBottomOf="@+id/guideline" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="90dp" />
+
+    <ImageView
+        android:id="@+id/message"
+        android:layout_width="40dp"
+        android:layout_height="30dp"
+        android:src="@mipmap/icon_message"
+        app:layout_constraintBottom_toTopOf="@id/bgView"
+        app:layout_constraintHorizontal_bias="0.26"
+        app:layout_constraintLeft_toRightOf="@id/bgView"
+        app:layout_constraintRight_toLeftOf="@+id/bgView"
+        app:layout_constraintTop_toBottomOf="@+id/bgView"
+        app:layout_constraintVertical_bias="0.559" />
+
+    <ImageView
+        android:id="@+id/setting"
+        android:layout_width="40dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="12dp"
+        android:src="@mipmap/icon_setting"
+        app:layout_constraintBottom_toBottomOf="@+id/message"
+        app:layout_constraintLeft_toRightOf="@+id/message" />
+
+    <View
+        android:id="@+id/bgView2"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:background="#1c000000"
+        app:layout_constraintBottom_toBottomOf="@+id/bgView" />
+
+    <TextView
+        android:id="@+id/jjMoney"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="奖金币\n0"
+        android:textSize="@dimen/textSize12"
+        android:textColor="@color/colorWhite"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="@+id/bgView2"
+        app:layout_constraintBottom_toBottomOf="@+id/bgView2"
+        app:layout_constraintLeft_toLeftOf="@id/bgView2"
+        app:layout_constraintRight_toLeftOf="@+id/gwMoney"
+        app:layout_constraintRight_toRightOf="@id/bgView2"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        />
+
+    <TextView
+        android:id="@+id/gwMoney"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="购物币\n10000"
+        android:textSize="@dimen/textSize12"
+        android:textColor="@color/colorWhite"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="@+id/bgView2"
+        app:layout_constraintBottom_toBottomOf="@+id/bgView2"
+        app:layout_constraintLeft_toRightOf="@+id/jjMoney"
+        app:layout_constraintRight_toLeftOf="@+id/bdMoney"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        />
+
+    <TextView
+        android:id="@+id/bdMoney"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="报单币\n0"
+        android:textSize="@dimen/textSize12"
+        android:textColor="@color/colorWhite"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="@+id/bgView2"
+        app:layout_constraintBottom_toBottomOf="@+id/bgView2"
+        app:layout_constraintRight_toRightOf="@+id/bgView2"
+        app:layout_constraintLeft_toRightOf="@+id/gwMoney"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        />
+
+    <View
+        android:id="@+id/line1"
+        android:layout_width="1dp"
+        android:layout_height="0dp"
+        android:background="#ffffff"
+        android:alpha="0.3"
+        android:layout_marginTop="7dp"
+        android:layout_marginBottom="7dp"
+        app:layout_constraintRight_toRightOf="@+id/jjMoney"
+        app:layout_constraintTop_toTopOf="@+id/bgView2"
+        app:layout_constraintBottom_toBottomOf="@+id/bgView2"
+        />
+
+    <View
+        android:id="@+id/line2"
+        android:layout_width="1dp"
+        android:layout_height="0dp"
+        android:background="#ffffff"
+        android:alpha="0.3"
+        android:layout_marginTop="7dp"
+        android:layout_marginBottom="7dp"
+        app:layout_constraintRight_toRightOf="@+id/gwMoney"
+        app:layout_constraintTop_toTopOf="@+id/bgView2"
+        app:layout_constraintBottom_toBottomOf="@+id/bgView2"
+        />
+
+    
+    <View
+        android:id="@+id/bgView3"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:background="@color/colorWhite"
+        app:layout_constraintTop_toBottomOf="@+id/bgView"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="15dp"
+        android:visibility="visible"
+        />
+
+    <com.ruffian.library.widget.RTextView
+        android:id="@+id/addShareholderSystem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="您可以加入分润系统啦，立即加入"
+        android:textSize="@dimen/textSize15"
+        android:textColor="@color/colorRedRgbE43E44"
+        android:gravity="center_vertical"
+        app:icon_src_normal="@mipmap/icon_voice"
+        app:icon_height="22dp"
+        app:icon_width="22dp"
+        android:drawablePadding="5dp"
+        app:layout_constraintTop_toTopOf="@id/bgView3"
+        app:layout_constraintBottom_toBottomOf="@id/bgView3"
+        app:layout_constraintLeft_toLeftOf="@id/bgView3"
+        app:layout_constraintRight_toRightOf="@id/bgView3"
+        />
+
+    <android.support.constraint.Group
+        android:id="@+id/groupAddShareholderSystemHint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="bgView3,addShareholderSystem"/>
+
+    
+</android.support.constraint.ConstraintLayout>

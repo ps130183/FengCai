@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/orderNo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/bgView"
+        android:background="@color/colorAccent"
+        android:text="订单编号：29383231883213"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/textSize16"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingTop="18dp"
+        android:paddingBottom="18dp"/>
+
+    <View
+        android:id="@+id/bgView"
+        android:layout_width="0dp"
+        android:layout_height="154dp"
+        android:background="@color/colorWhite"
+        app:layout_constraintTop_toBottomOf="@id/orderNo"
+        app:layout_constraintLeft_toLeftOf="@id/orderNo"
+        app:layout_constraintRight_toRightOf="@id/orderNo"
+        app:layout_constraintBottom_toTopOf="@+id/orderTime"/>
+
+
+    <ImageView
+        android:id="@+id/ivTruck"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@mipmap/icon_location_gray"
+        app:layout_constraintTop_toTopOf="@id/bgView"
+        app:layout_constraintBottom_toBottomOf="@id/divideLine"
+        app:layout_constraintLeft_toLeftOf="@id/divideLine"
+        app:layout_constraintRight_toLeftOf="@+id/logisticsCompany"
+        />
+
+
+
+    <TextView
+        android:id="@+id/logisticsCompany"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="物流公司：中通快递"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:textSize="@dimen/textSize14"
+        android:textColor="@color/colorBlockRgb777777"
+        app:layout_constraintLeft_toRightOf="@+id/ivTruck"
+        app:layout_constraintTop_toTopOf="@id/bgView"
+        app:layout_constraintBottom_toTopOf="@id/logisticsOrderNo"
+        app:layout_constraintRight_toLeftOf="@id/copy"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        app:layout_constraintVertical_chainStyle="packed"
+        android:layout_marginBottom="2dp"
+        />
+
+    <TextView
+        android:id="@+id/logisticsOrderNo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="物流单号：231983281321138932"
+        android:ellipsize="end"
+        android:lines="1"
+        android:textSize="@dimen/textSize14"
+        android:textColor="@color/colorBlockRgb777777"
+        app:layout_constraintLeft_toLeftOf="@+id/logisticsCompany"
+        app:layout_constraintTop_toBottomOf="@id/logisticsCompany"
+        app:layout_constraintBottom_toBottomOf="@id/divideLine"
+        app:layout_constraintRight_toLeftOf="@id/copy"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="2dp"
+        />
+
+    <com.ruffian.library.widget.RTextView
+        android:id="@+id/copy"
+        android:layout_width="60dp"
+        android:layout_height="26dp"
+        android:text="复制"
+        android:textSize="@dimen/textSize14"
+        android:textColor="@color/colorBlockRgb555555"
+        app:border_width_normal="1dp"
+        android:gravity="center"
+        app:corner_radius="3dp"
+        app:border_color_normal="@color/colorBlockRgbCCCCCC"
+        android:layout_marginRight="15dp"
+        app:layout_constraintTop_toTopOf="@id/ivTruck"
+        app:layout_constraintBottom_toBottomOf="@id/ivTruck"
+        app:layout_constraintRight_toRightOf="@id/bgView"
+        app:layout_constraintLeft_toRightOf="@id/logisticsCompany"
+
+        />
+
+
+    <View
+        android:id="@+id/divideLine"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@color/divide_color"
+        app:layout_constraintTop_toTopOf="@id/bgView"
+        app:layout_constraintBottom_toBottomOf="@id/bgView"
+        app:layout_constraintLeft_toLeftOf="@id/bgView"
+        app:layout_constraintRight_toRightOf="@id/bgView"
+        android:layout_marginLeft="15dp"/>
+
+
+    <ImageView
+        android:id="@+id/ivAddress"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@mipmap/icon_truck"
+        app:layout_constraintTop_toTopOf="@id/divideLine"
+        app:layout_constraintBottom_toBottomOf="@id/bgView"
+        app:layout_constraintLeft_toLeftOf="@id/divideLine"
+        />
+
+    <TextView
+        android:id="@+id/userNamePhone"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="宋宝洁   18888888888"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:textSize="@dimen/textSize14"
+        android:textColor="@color/colorBlockRgb191919"
+        app:layout_constraintLeft_toRightOf="@+id/ivAddress"
+        app:layout_constraintTop_toBottomOf="@id/divideLine"
+        app:layout_constraintBottom_toTopOf="@id/userAddress"
+        app:layout_constraintRight_toRightOf="@id/bgView"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        app:layout_constraintVertical_chainStyle="packed"
+        android:layout_marginBottom="2dp"
+        />
+
+    <TextView
+        android:id="@+id/userAddress"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="北京市东城区左安门内大街左安溪园甲2-9"
+        android:ellipsize="end"
+        android:lines="1"
+        android:textSize="@dimen/textSize14"
+        android:textColor="@color/colorBlockRgb777777"
+        app:layout_constraintLeft_toLeftOf="@+id/userNamePhone"
+        app:layout_constraintTop_toBottomOf="@id/userNamePhone"
+        app:layout_constraintBottom_toBottomOf="@id/bgView"
+        app:layout_constraintRight_toRightOf="@id/bgView"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="2dp"
+        />
+
+    <TextView
+        android:id="@+id/orderTime"
+        android:layout_width="0dp"
+        android:layout_height="44dp"
+        android:text="下单时间：2018-11-09 12：40"
+        android:textColor="@color/colorBlockRgb323232"
+        android:textSize="@dimen/textSize14"
+        android:background="@color/colorWhite"
+        android:gravity="center_vertical"
+        app:layout_constraintTop_toBottomOf="@id/bgView"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="15dp"
+        android:paddingLeft="15dp"
+        />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@color/divide_color"
+        app:layout_constraintBottom_toTopOf="@id/orderTime"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@color/divide_color"
+        app:layout_constraintTop_toBottomOf="@id/orderTime"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@color/divide_color"
+        app:layout_constraintTop_toBottomOf="@id/bgView"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.wzdq.fengcai">
+
+    <!-- 网络请求权限 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:name=".base.BaseApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/icon_app_logo"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/icon_app_logo"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".module.login.LoginActivity"
+            android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:launchMode="singleTask" />
+        <activity android:name=".module.shop.ShoppingCartActivity" />
+        <activity android:name=".module.shop.GoodsInfoActivity" />
+        <activity android:name=".module.mine.account.AccountInfoActivity" />
+        <activity android:name=".module.mine.account.withdraw.WithdrawDepositActivity" />
+        <activity android:name=".module.mine.account.bank.AddBankCardActivity" />
+        <activity android:name=".module.mine.account.bank.MyBankActivity" />
+        <activity android:name=".module.mine.account.bank.BankCardInfoActivity" />
+        <activity android:name=".module.shop.ConversionRecordActivity" />
+        <activity android:name=".module.shop.ConversionDetailsActivity" />
+        <activity android:name=".module.shop.ConfirmConversionActivity" />
+        <activity android:name=".module.mine.service.ServiceCenterActivity" />
+        <activity android:name=".module.mine.provide.ProvideForAgedActivity" />
+        <activity android:name=".module.mine.provide.RaiseSalaryDetailsActivity" />
+        <activity android:name=".module.mine.setting.SettingActivity" />
+        <activity android:name=".module.mine.setting.BindPhoneActivity" />
+        <activity android:name=".module.mine.setting.ModifyPasswordActivity" />
+        <activity android:name=".module.mine.setting.ModifyPasswordTwoActivity" />
+        <activity android:name=".module.mine.address.AddressManagerActivity" />
+        <activity android:name=".module.mine.address.AddAddressActivity" />
+        <activity android:name=".module.mine.userinfo.EditorUserInfoActivity" />
+        <activity android:name=".module.mine.userinfo.EditorUserDetailInfoActivity" />
+        <activity android:name=".module.mine.account.AccountChangeDetailActivity" />
+        <activity android:name=".module.mine.account.TransferAccountActivity" />
+        <activity android:name=".module.mine.message.MessageCenterActivity" />
+        <activity android:name=".module.mine.message.MessageDetailActivity" />
+        <activity android:name=".module.login.ActivateAccountActivity" />
+        <activity android:name=".module.login.ForgetPasswordActivity" />
+        <activity android:name=".module.mine.setting.ServiceActivity" />
+        <activity android:name=".module.mine.service.MemberSystemActivity" />
+        <activity android:name=".module.mine.expand.PersonExpandActivity" />
+        <activity android:name=".module.mine.service.ShareholderManagerActivity" />
+        <activity android:name=".module.mine.setting.AboutUsActivity" />
+        <activity android:name=".module.mine.shareholder.ApplyBecomeShareholderOfUserActivity" />
+        <activity android:name=".module.mine.service.ApplyBcomeServiceActivity"></activity>
+    </application>
+
+</manifest>

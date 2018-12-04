@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.wzdq.fengcai.module.mine.setting.BindPhoneActivity">
+
+    <View
+        android:id="@+id/bgView"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:background="@color/colorWhite"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="15dp"/>
+
+    <TextView
+        android:id="@+id/nameHint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="收货人"
+        android:textColor="@color/colorBlockRgb242424"
+        android:textSize="15sp"
+        app:layout_constraintLeft_toLeftOf="@id/divideLine"
+        app:layout_constraintRight_toRightOf="@id/bgView"
+        app:layout_constraintTop_toTopOf="@id/bgView"
+        app:layout_constraintBottom_toTopOf="@id/divideLine"
+        app:layout_constraintHorizontal_bias="0"
+        android:gravity="center_vertical"
+        />
+
+
+    <EditText
+        android:id="@+id/userName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="请填写收货人姓名"
+        android:textColor="@color/colorBlockRgb242424"
+        android:textSize="@dimen/textSize14"
+        android:background="@color/transparent"
+        app:layout_constraintLeft_toRightOf="@id/barrier"
+        app:layout_constraintBaseline_toBaselineOf="@id/nameHint"
+        app:layout_constraintRight_toRightOf="@id/bgView"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
+        style="@style/singleLine"/>
+
+    <View
+        android:id="@+id/divideLine"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@color/divide_color"
+        app:layout_constraintLeft_toLeftOf="@id/bgView"
+        app:layout_constraintRight_toRightOf="@id/bgView"
+        app:layout_constraintTop_toTopOf="@id/bgView"
+        app:layout_constraintBottom_toTopOf="@id/divideLine2"
+        android:layout_marginLeft="15dp"/>
+
+    <View
+        android:id="@+id/divideLine2"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@color/divide_color"
+        app:layout_constraintLeft_toLeftOf="@id/bgView"
+        app:layout_constraintRight_toRightOf="@id/bgView"
+        app:layout_constraintTop_toBottomOf="@id/divideLine"
+        app:layout_constraintBottom_toTopOf="@id/divideLine3"
+        android:layout_marginLeft="15dp"/>
+
+    <View
+        android:id="@+id/divideLine3"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@color/divide_color"
+        app:layout_constraintLeft_toLeftOf="@id/bgView"
+        app:layout_constraintRight_toRightOf="@id/bgView"
+        app:layout_constraintTop_toBottomOf="@id/divideLine2"
+        app:layout_constraintBottom_toBottomOf="@id/bgView"
+        android:layout_marginLeft="15dp"/>
+
+    <TextView
+        android:id="@+id/phoneHint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="手机号码"
+        android:textColor="@color/colorBlockRgb242424"
+        android:textSize="15sp"
+        app:layout_constraintLeft_toLeftOf="@id/nameHint"
+        app:layout_constraintRight_toRightOf="@id/bgView"
+        app:layout_constraintTop_toBottomOf="@id/divideLine"
+        app:layout_constraintBottom_toTopOf="@id/divideLine2"
+        app:layout_constraintHorizontal_bias="0"
+        />
+
+
+    <EditText
+        android:id="@+id/userPhone"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="请填写收货人手机号码"
+        android:textColor="@color/colorBlockRgb242424"
+        android:textSize="@dimen/textSize14"
+        android:background="@color/transparent"
+        app:layout_constraintLeft_toLeftOf="@id/userName"
+        app:layout_constraintBaseline_toBaselineOf="@id/phoneHint"
+        app:layout_constraintRight_toRightOf="@id/bgView"
+        android:layout_marginRight="15dp"
+        android:maxLength="11"
+        android:inputType="phone"/>
+
+    <TextView
+        android:id="@+id/newPasswordHint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="省市区"
+        android:textColor="@color/colorBlockRgb242424"
+        android:textSize="15sp"
+        app:layout_constraintLeft_toLeftOf="@id/phoneHint"
+        app:layout_constraintRight_toRightOf="@id/bgView"
+        app:layout_constraintTop_toBottomOf="@id/divideLine2"
+        app:layout_constraintBottom_toTopOf="@id/divideLine3"
+        app:layout_constraintHorizontal_bias="0"
+        />
+
+
+    <com.ruffian.library.widget.RTextView
+        android:id="@+id/selectArea"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="15dp"
+        android:background="@color/transparent"
+        android:hint="请选择"
+        android:textColor="@color/colorBlockRgb242424"
+        android:textSize="@dimen/textSize14"
+        android:gravity="center_vertical"
+        app:icon_direction="right"
+        app:icon_src_normal="@mipmap/icon_arrow_right"
+        app:icon_width="20dp"
+        app:icon_height="20dp"
+        app:layout_constraintLeft_toLeftOf="@id/userName"
+        app:layout_constraintRight_toRightOf="@id/bgView"
+        app:layout_constraintTop_toTopOf="@id/divideLine2"
+        app:layout_constraintBottom_toBottomOf="@id/divideLine3"/>
+
+    <TextView
+        android:id="@+id/doubleNewPasswordHint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="详细地址"
+        android:textColor="@color/colorBlockRgb242424"
+        android:textSize="15sp"
+        app:layout_constraintLeft_toLeftOf="@id/phoneHint"
+        app:layout_constraintRight_toRightOf="@id/bgView"
+        app:layout_constraintTop_toBottomOf="@id/divideLine3"
+        app:layout_constraintBottom_toBottomOf="@id/bgView"
+        app:layout_constraintHorizontal_bias="0"
+        />
+
+
+    <EditText
+        android:id="@+id/userAddressDetails"
+        android:layout_width="0dp"
+        android:layout_height="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@color/transparent"
+        android:hint="请填写街道、楼牌号等"
+        android:inputType="text"
+        android:textColor="@color/colorBlockRgb242424"
+        android:textSize="@dimen/textSize14"
+        app:layout_constraintBaseline_toBaselineOf="@id/doubleNewPasswordHint"
+        app:layout_constraintLeft_toLeftOf="@id/userName"
+        app:layout_constraintRight_toRightOf="@id/bgView"
+        style="@style/singleLine"/>
+
+    <android.support.constraint.Barrier
+        android:id="@+id/barrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="right"
+        app:constraint_referenced_ids="phoneHint,nameHint,newPasswordHint,doublePasswordHint"/>
+
+
+
+    <Button
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="保存"
+        android:textSize="@dimen/textSize16"
+        android:textColor="@color/colorWhite"
+        android:background="@drawable/selector_button_corners_20"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/bgView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.3"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:enabled="false"/>
+
+</android.support.constraint.ConstraintLayout>

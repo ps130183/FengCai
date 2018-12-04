@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.wzdq.fengcai.module.mine.account.TransferAccountActivity">
+
+    <TextView
+        android:id="@+id/subTitleMoney"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="转账金额："
+        android:textColor="@color/colorBlockRgb333333"
+        android:textSize="@dimen/textSize14"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="43dp"
+        android:layout_marginLeft="15dp"/>
+
+    <TextView
+        android:id="@+id/subTitleAccount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="接受账号："
+        android:textColor="@color/colorBlockRgb333333"
+        android:textSize="@dimen/textSize14"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/barrierMoney"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="15dp"/>
+
+    <TextView
+        android:id="@+id/subTitleName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="接受姓名："
+        android:textColor="@color/colorBlockRgb333333"
+        android:textSize="@dimen/textSize14"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/barrierAccount"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="15dp"/>
+    <android.support.constraint.Barrier
+        android:id="@+id/subTitleBarrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="right"
+        app:constraint_referenced_ids="subTitleMoney,subTitleAccount,subTitleName"/>
+
+    <EditText
+        android:id="@+id/etMoney"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:hint="请填写转账金额"
+        android:textSize="@dimen/textSize14"
+        android:textColor="@color/colorBlockRgb242424"
+        android:background="@drawable/shape_edittext_bg"
+        android:paddingLeft="10dp"
+        app:layout_constraintTop_toTopOf="@id/subTitleMoney"
+        app:layout_constraintBottom_toBottomOf="@id/subTitleMoney"
+        app:layout_constraintLeft_toRightOf="@id/subTitleBarrier"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="15dp"
+        android:inputType="numberDecimal"
+        android:maxLines="1"/>
+
+    <EditText
+        android:id="@+id/etAccount"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:hint="请填写接收人账号"
+        android:textSize="@dimen/textSize14"
+        android:textColor="@color/colorBlockRgb242424"
+        android:background="@drawable/shape_edittext_bg"
+        android:paddingLeft="10dp"
+        app:layout_constraintTop_toTopOf="@id/subTitleAccount"
+        app:layout_constraintBottom_toBottomOf="@id/subTitleAccount"
+        app:layout_constraintLeft_toLeftOf="@id/etMoney"
+        app:layout_constraintRight_toRightOf="@id/etMoney"
+        style="@style/singleLine"/>
+
+    <EditText
+        android:id="@+id/etName"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:hint="请填写接收人姓名"
+        android:textSize="@dimen/textSize14"
+        android:textColor="@color/colorBlockRgb242424"
+        android:background="@drawable/shape_edittext_bg"
+        android:paddingLeft="10dp"
+        app:layout_constraintTop_toTopOf="@id/subTitleName"
+        app:layout_constraintBottom_toBottomOf="@id/subTitleName"
+        app:layout_constraintLeft_toLeftOf="@id/etMoney"
+        app:layout_constraintRight_toRightOf="@id/etMoney"
+        style="@style/singleLine"
+        android:enabled="false"/>
+
+    <android.support.constraint.Barrier
+        android:id="@+id/barrierMoney"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="subTitleMoney,etMoney"
+        app:barrierDirection="bottom"/>
+
+    <android.support.constraint.Barrier
+        android:id="@+id/barrierAccount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="subTitleAccount,etAccount"
+        app:barrierDirection="bottom"/>
+
+    <Button
+        android:id="@+id/btnConfirm"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="确定"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/textSize18"
+        android:background="@drawable/selector_button_corners_20"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etName"
+        android:layout_marginTop="75dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:enabled="false"/>
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="110dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardBackgroundColor="@color/colorWhite"
+    android:layout_marginLeft="15dp"
+    android:layout_marginRight="15dp"
+    android:layout_marginTop="10dp"
+    app:cardElevation="5dp">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <View
+            android:id="@+id/divideLine"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="@color/divide_color"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintVertical_bias="1"
+            android:layout_marginBottom="40dp"
+            />
+
+        <TextView
+            android:id="@+id/userNamePhone"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="宋宝杰   1888888888"
+            android:textSize="@dimen/textSize15"
+            android:textColor="@color/colorBlockRgb191919"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/userAddress"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            />
+
+        <TextView
+            android:id="@+id/userAddress"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="北京市东城区左安门内大街左安溪园甲2-9"
+            android:textSize="@dimen/textSize13"
+            android:textColor="@color/colorBlockRgb777777"
+            app:layout_constraintLeft_toLeftOf="@id/userNamePhone"
+            app:layout_constraintRight_toRightOf="@id/userNamePhone"
+            app:layout_constraintTop_toBottomOf="@id/userNamePhone"
+            app:layout_constraintBottom_toBottomOf="@id/divideLine"
+            />
+
+        <CheckBox
+            android:id="@+id/checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@drawable/selector_check_box_theme"
+            app:layout_constraintTop_toBottomOf="@id/divideLine"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:text="设为默认"
+            android:textColor="@color/colorBlockRgb888888"
+            android:textSize="@dimen/textSize13"/>
+
+        <com.ruffian.library.widget.RTextView
+            android:id="@+id/delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="删除"
+            android:textColor="@color/colorBlockRgb888888"
+            android:textSize="@dimen/textSize13"
+            android:drawablePadding="5dp"
+            app:layout_constraintTop_toTopOf="@id/divideLine"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/editor"
+            android:layout_marginRight="15dp"
+            app:icon_src_normal="@mipmap/icon_delete"
+            app:icon_width="18dp"
+            app:icon_height="18dp"/>
+
+        <com.ruffian.library.widget.RTextView
+            android:id="@+id/editor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="编辑"
+            android:textColor="@color/colorBlockRgb888888"
+            android:textSize="@dimen/textSize13"
+            android:gravity="center_vertical"
+            android:drawablePadding="5dp"
+            app:layout_constraintTop_toTopOf="@id/divideLine"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/delete"
+            app:layout_constraintLeft_toRightOf="@id/checkbox"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintHorizontal_bias="1"
+            android:layout_marginRight="15dp"
+            app:icon_src_normal="@mipmap/icon_editor"
+            app:icon_width="18dp"
+            app:icon_height="18dp"/>
+
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.v7.widget.CardView>

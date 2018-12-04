@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.wzdq.fengcai.module.mine.userinfo.EditorUserInfoActivity">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <View
+            android:id="@+id/bgView"
+            android:layout_width="0dp"
+            android:layout_height="134dp"
+            android:background="@color/colorWhite"
+            android:layout_marginTop="15dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/bgView2"/>
+
+        <TextView
+            android:id="@+id/stUserNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="会员编号："
+            android:textColor="@color/colorBlockRgb323232"
+            android:textSize="@dimen/textSize15"
+            app:layout_constraintTop_toTopOf="@id/bgView"
+            app:layout_constraintBottom_toTopOf="@id/divideLine1"
+            app:layout_constraintLeft_toLeftOf="@id/bgView"
+            android:layout_marginLeft="15dp"/>
+
+        <TextView
+            android:id="@+id/userNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="bg001"
+            android:textSize="@dimen/textSize14"
+            android:textColor="@color/colorBlockRgb242424"
+            app:layout_constraintBaseline_toBaselineOf="@id/stUserNumber"
+            app:layout_constraintRight_toRightOf="@id/bgView"
+            android:layout_marginRight="15dp"
+            />
+
+        <View
+            android:id="@+id/divideLine1"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="@color/divide_color"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/bgView"
+            app:layout_constraintBottom_toTopOf="@id/divideLine2"/>
+
+        <TextView
+            android:id="@+id/stUserName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="姓        名："
+            android:textColor="@color/colorBlockRgb323232"
+            android:textSize="@dimen/textSize15"
+            app:layout_constraintTop_toBottomOf="@id/divideLine1"
+            app:layout_constraintBottom_toTopOf="@id/divideLine2"
+            app:layout_constraintLeft_toLeftOf="@id/stUserNumber"/>
+        <TextView
+            android:id="@+id/userName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="宋宝杰"
+            android:textSize="@dimen/textSize14"
+            android:textColor="@color/colorBlockRgb242424"
+            app:layout_constraintBaseline_toBaselineOf="@id/stUserName"
+            app:layout_constraintRight_toRightOf="@id/userNumber"
+            />
+        <View
+            android:id="@+id/divideLine2"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="@color/divide_color"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/divideLine1"
+            app:layout_constraintBottom_toBottomOf="@id/bgView"/>
+
+        <TextView
+            android:id="@+id/stUserPhone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="手机号码："
+            android:textColor="@color/colorBlockRgb323232"
+            android:textSize="@dimen/textSize15"
+            app:layout_constraintTop_toBottomOf="@id/divideLine2"
+            app:layout_constraintBottom_toBottomOf="@id/bgView"
+            app:layout_constraintLeft_toLeftOf="@id/stUserNumber"/>
+
+
+        <TextView
+            android:id="@+id/userPhone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="18888888888"
+            android:textSize="@dimen/textSize14"
+            android:textColor="@color/colorBlockRgb242424"
+            app:layout_constraintBaseline_toBaselineOf="@id/stUserPhone"
+            app:layout_constraintRight_toRightOf="@id/userNumber"
+            />
+        <View
+            android:id="@+id/bgView2"
+            android:layout_width="0dp"
+            android:layout_height="289dp"
+            android:background="@color/colorWhite"
+            android:layout_marginTop="15dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/bgView"
+            app:layout_constraintBottom_toTopOf="@id/btnSave"/>
+
+
+        <TextView
+            android:id="@+id/stUserPortrait"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="头        像："
+            android:textColor="@color/colorBlockRgb323232"
+            android:textSize="@dimen/textSize15"
+            app:layout_constraintTop_toTopOf="@id/bgView2"
+            app:layout_constraintBottom_toTopOf="@id/divideLine3"
+            app:layout_constraintLeft_toLeftOf="@id/stUserNumber"/>
+
+        <com.ps.glidelib.GlideImageView
+            android:id="@+id/userPortrait"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:src="@drawable/beautiful_gril"
+            app:siv_radius="4dp"
+            app:layout_constraintRight_toLeftOf="@id/arUserPortrait"
+            app:layout_constraintTop_toTopOf="@id/bgView2"
+            app:layout_constraintBottom_toTopOf="@+id/divideLine3"
+            />
+
+        <ImageView
+            android:id="@+id/arUserPortrait"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@mipmap/icon_arrow_right"
+            app:layout_constraintRight_toRightOf="@id/userNumber"
+            app:layout_constraintTop_toTopOf="@id/bgView2"
+            app:layout_constraintBottom_toTopOf="@+id/divideLine3"/>
+        <View
+            android:id="@+id/divideLine3"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="@color/divide_color"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/bgView2"
+            android:layout_marginTop="64dp"/>
+
+        <TextView
+            android:id="@+id/stUserIdCard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="身份证号："
+            android:textColor="@color/colorBlockRgb323232"
+            android:textSize="@dimen/textSize15"
+            app:layout_constraintTop_toBottomOf="@id/divideLine3"
+            app:layout_constraintBottom_toTopOf="@id/divideLine4"
+            app:layout_constraintLeft_toLeftOf="@id/stUserNumber"/>
+
+        <com.ruffian.library.widget.RTextView
+            android:id="@+id/userIdCard"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="未绑定"
+            android:gravity="center_vertical|right"
+            android:textSize="@dimen/textSize14"
+            android:textColor="@color/colorBlockRgb242424"
+            app:layout_constraintBaseline_toBaselineOf="@id/stUserIdCard"
+            app:layout_constraintRight_toRightOf="@id/userNumber"
+            app:layout_constraintLeft_toRightOf="@id/stUserIdCard"
+            app:icon_src_normal="@mipmap/icon_arrow_right"
+            app:icon_height="40dp"
+            app:icon_width="30dp"
+            app:icon_direction="right"
+            />
+
+        <View
+            android:id="@+id/divideLine4"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="@color/divide_color"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/divideLine3"
+            android:layout_marginTop="44dp"/>
+
+        <TextView
+            android:id="@+id/stUserEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="邮        箱："
+            android:textColor="@color/colorBlockRgb323232"
+            android:textSize="@dimen/textSize15"
+            app:layout_constraintTop_toBottomOf="@id/divideLine4"
+            app:layout_constraintBottom_toTopOf="@id/divideLine5"
+            app:layout_constraintLeft_toLeftOf="@id/stUserNumber"/>
+
+        <com.ruffian.library.widget.RTextView
+            android:id="@+id/userEmail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="未绑定"
+            android:gravity="center_vertical|right"
+            android:textSize="@dimen/textSize14"
+            android:textColor="@color/colorBlockRgb242424"
+            app:layout_constraintBaseline_toBaselineOf="@id/stUserEmail"
+            app:layout_constraintRight_toRightOf="@id/userNumber"
+            app:layout_constraintLeft_toRightOf="@+id/stUserEmail"
+            app:icon_src_normal="@mipmap/icon_arrow_right"
+            app:icon_height="40dp"
+            app:icon_width="30dp"
+            app:icon_direction="right"
+            />
+
+
+        <View
+            android:id="@+id/divideLine5"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="@color/divide_color"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/divideLine4"
+            android:layout_marginTop="44dp"/>
+
+        <TextView
+            android:id="@+id/stUserQQ"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Q Q 账号："
+            android:textColor="@color/colorBlockRgb323232"
+            android:textSize="@dimen/textSize15"
+            app:layout_constraintTop_toBottomOf="@id/divideLine5"
+            app:layout_constraintBottom_toTopOf="@id/divideLine6"
+            app:layout_constraintLeft_toLeftOf="@id/stUserNumber"/>
+
+        <com.ruffian.library.widget.RTextView
+            android:id="@+id/userQQ"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="未绑定"
+            android:gravity="center_vertical|right"
+            android:textSize="@dimen/textSize14"
+            android:textColor="@color/colorBlockRgb242424"
+            app:layout_constraintBaseline_toBaselineOf="@id/stUserQQ"
+            app:layout_constraintRight_toRightOf="@id/userNumber"
+            app:layout_constraintLeft_toRightOf="@id/stUserQQ"
+            app:icon_src_normal="@mipmap/icon_arrow_right"
+            app:icon_height="40dp"
+            app:icon_width="30dp"
+            app:icon_direction="right"
+            />
+
+
+        <View
+            android:id="@+id/divideLine6"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="@color/divide_color"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/divideLine5"
+            android:layout_marginTop="44dp"/>
+
+        <TextView
+            android:id="@+id/stUserAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="居住地址："
+            android:textColor="@color/colorBlockRgb323232"
+            android:textSize="@dimen/textSize15"
+            app:layout_constraintTop_toBottomOf="@id/divideLine6"
+            app:layout_constraintBottom_toTopOf="@id/divideLine7"
+            app:layout_constraintLeft_toLeftOf="@id/stUserNumber"/>
+
+        <com.ruffian.library.widget.RTextView
+            android:id="@+id/userAddress"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="未编辑"
+            android:gravity="center_vertical|right"
+            android:textSize="@dimen/textSize14"
+            android:textColor="@color/colorBlockRgb242424"
+            app:layout_constraintBaseline_toBaselineOf="@id/stUserAddress"
+            app:layout_constraintRight_toRightOf="@id/userNumber"
+            app:layout_constraintLeft_toRightOf="@+id/stUserAddress"
+            app:icon_src_normal="@mipmap/icon_arrow_right"
+            app:icon_height="40dp"
+            app:icon_width="30dp"
+            app:icon_direction="right"
+            />
+
+
+        <View
+            android:id="@+id/divideLine7"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="@color/divide_color"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/divideLine6"
+            android:layout_marginTop="44dp"/>
+
+        <TextView
+            android:id="@+id/stUserSex"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="性        别："
+            android:textColor="@color/colorBlockRgb323232"
+            android:textSize="@dimen/textSize15"
+            app:layout_constraintTop_toBottomOf="@id/divideLine7"
+            app:layout_constraintBottom_toBottomOf="@id/bgView2"
+            app:layout_constraintLeft_toLeftOf="@id/stUserNumber"/>
+
+        <com.ruffian.library.widget.RTextView
+            android:id="@+id/userSex"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="请选择"
+            android:gravity="center_vertical|right"
+            android:textSize="@dimen/textSize14"
+            android:textColor="@color/colorBlockRgb242424"
+            app:layout_constraintBaseline_toBaselineOf="@id/stUserSex"
+            app:layout_constraintRight_toRightOf="@id/userNumber"
+            app:layout_constraintLeft_toRightOf="@id/stUserSex"
+            app:icon_src_normal="@mipmap/icon_arrow_right"
+            app:icon_height="40dp"
+            app:icon_width="30dp"
+            app:icon_direction="right"
+            />
+
+
+        <Button
+            android:id="@+id/btnSave"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="保  存"
+            android:textSize="@dimen/textSize16"
+            android:textColor="@color/colorWhite"
+            android:background="@drawable/selector_button_corners_20"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="24dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/bgView2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="35dp"
+            android:layout_marginTop="75dp"/>
+        
+    </android.support.constraint.ConstraintLayout>
+
+</ScrollView>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="20dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/shape_dialog_transaction_bg">
+
+
+    <View
+        android:id="@+id/divideLine"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@color/colorBlockRgbCCCCCC"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="50dp"/>
+
+    <ImageView
+        android:id="@+id/ivClose"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:src="@mipmap/icon_close"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/divideLine"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="15dp"
+        />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="请输入交易密码"
+        android:textColor="@color/colorBlockRgb191919"
+        android:textSize="@dimen/textSize18"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/divideLine"
+        app:layout_constraintLeft_toRightOf="@id/ivClose"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/hintWithdrawMoney"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="提现金额"
+        android:textSize="@dimen/textSize16"
+        android:textColor="@color/colorBlockRgb555555"
+        app:layout_constraintTop_toBottomOf="@id/divideLine"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="25dp"/>
+
+    <TextView
+        android:id="@+id/withdrawMoney"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="5000"
+        android:textColor="@color/colorBlock"
+        android:textSize="38dp"
+        app:layout_constraintTop_toBottomOf="@id/hintWithdrawMoney"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="19dp"/>
+
+    <EditText
+        android:id="@+id/transPassword"
+        android:layout_width="0dp"
+        android:layout_height="44dp"
+        android:hint="请输入交易密码"
+        app:layout_constraintTop_toBottomOf="@id/withdrawMoney"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="22dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:textSize="@dimen/textSize16"
+        android:inputType="textPassword"
+        android:background="@drawable/shape_edittext_bg"
+        />
+
+
+    <View
+        android:id="@+id/divideLine1"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@color/colorBlockRgbCCCCCC"
+        app:layout_constraintTop_toBottomOf="@id/transPassword"
+        app:layout_constraintLeft_toLeftOf="@id/transPassword"
+        app:layout_constraintRight_toRightOf="@id/transPassword"
+        android:layout_marginTop="15dp"
+        />
+
+    <Button
+        android:id="@+id/btnConfirm"
+        android:layout_width="0dp"
+        android:layout_height="35dp"
+        android:text="确定"
+        android:textSize="@dimen/textSize16"
+        android:textColor="@color/colorWhite"
+        app:layout_constraintTop_toBottomOf="@id/divideLine1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:background="@drawable/selector_button_corners_20"
+        android:layout_margin="15dp"/>
+
+
+</android.support.constraint.ConstraintLayout>

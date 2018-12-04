@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <dimen name="toolBarHeight">48dp</dimen>
+
+    <dimen name="viewSpace16">16dp</dimen>
+    <dimen name="viewSpace8">8dp</dimen>
+    <dimen name="viewSpace32">32dp</dimen>
+    <dimen name="viewSpace48">48dp</dimen>
+
+    <dimen name="textSize12">12dp</dimen>
+    <dimen name="textSize13">13dp</dimen>
+    <dimen name="textSize14">14dp</dimen>
+    <dimen name="textSize15">15dp</dimen>
+    <dimen name="textSize16">16dp</dimen>
+    <dimen name="textSize18">18dp</dimen>
+    <dimen name="textSize20">20dp</dimen>
+    <dimen name="textSize22">22dp</dimen>
+
+</resources>

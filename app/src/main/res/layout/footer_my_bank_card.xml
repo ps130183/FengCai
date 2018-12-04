@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.ps.glidelib.GlideImageView
+        android:id="@+id/bgView"
+        android:layout_width="0dp"
+        android:layout_height="125dp"
+        android:src="@color/colorWhite"
+        app:siv_border_color="@color/colorRedRgbE43E44"
+        app:siv_border_width="1dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:siv_radius="10dp"
+        android:layout_margin="15dp"
+        />
+
+    <com.wzdq.fengcai.view.MTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="添加银行卡"
+        android:textColor="@color/colorRedRgbE43E44"
+        android:textSize="@dimen/textSize18"
+        app:layout_constraintLeft_toLeftOf="@+id/bgView"
+        app:layout_constraintRight_toRightOf="@+id/bgView"
+        app:layout_constraintTop_toTopOf="@+id/bgView"
+        app:layout_constraintBottom_toBottomOf="@+id/bgView"
+        app:imageIcon="@mipmap/icon_add_red"
+        app:imageWidth="30dp"
+        app:imageHeight="30dp"
+        android:gravity="center_vertical"
+        android:drawablePadding="5dp"
+        />
+
+</android.support.constraint.ConstraintLayout>

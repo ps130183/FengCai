@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="135dp"
+    android:background="#ffffff">
+
+    <com.ps.glidelib.GlideImageView
+        android:id="@+id/goodsImage"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginLeft="10dp"
+        android:src="@drawable/goods_coffer"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/goodsTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="15dp"
+        android:lines="2"
+        android:text="海植物咖啡 极品 天然 原味 呈现咖啡完美特性 16g"
+        android:textColor="@color/colorBlockRgb242424"
+        android:textSize="@dimen/textSize16"
+        app:layout_constraintLeft_toRightOf="@+id/goodsImage"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/goodsImage" />
+
+    <TextView
+        android:id="@+id/goodsSubTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="上平详情上平详情上平详情上平详情上平详情"
+        android:textColor="@color/colorBlockRgbAAAAAA"
+        android:textSize="@dimen/textSize12"
+        app:layout_constraintLeft_toLeftOf="@+id/goodsTitle"
+        app:layout_constraintRight_toRightOf="@+id/goodsTitle"
+        app:layout_constraintTop_toBottomOf="@+id/goodsTitle" />
+
+    <TextView
+        android:id="@+id/price_new"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="10dp"
+        android:text="¥588"
+        android:textColor="@color/colorRedRgbE43E44"
+        android:textSize="@dimen/textSize20"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/goodsImage" />
+
+    <TextView
+        android:id="@+id/price_old"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:text="¥688"
+        android:textColor="@color/colorBlockRgb888888"
+        android:textSize="@dimen/textSize14"
+        app:layout_constraintBaseline_toBaselineOf="@+id/price_new"
+        app:layout_constraintLeft_toRightOf="@+id/price_new" />
+
+    <Button
+        android:id="@+id/addShoppingCart"
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:background="@drawable/shape_button"
+        android:text="加入购物车"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/textSize12"
+        app:layout_constraintBottom_toBottomOf="@+id/price_new"
+        app:layout_constraintRight_toRightOf="@+id/goodsTitle"
+
+        />
+
+    <android.support.constraint.Group
+        android:id="@+id/shoppingGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="goodsSubTitle,addShoppingCart"
+        android:visibility="gone"/>
+
+
+    <com.wzdq.fengcai.view.AddDecreaseView
+        android:id="@+id/addDecrease"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/goodsImage"
+        app:layout_constraintRight_toRightOf="@+id/goodsTitle"
+        android:visibility="gone">
+
+    </com.wzdq.fengcai.view.AddDecreaseView>
+
+
+
+</android.support.constraint.ConstraintLayout>

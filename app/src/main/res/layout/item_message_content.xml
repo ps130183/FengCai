@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="15dp">
+
+
+    <TextView
+        android:id="@+id/messageReceiverTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2018-11-12 15:25"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="spread" />
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/bgView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:cardBackgroundColor="@color/colorWhite"
+        android:padding="10dp"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="0dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/messageReceiverTime"/>
+
+
+
+    <com.wzdq.fengcai.view.DivideLine
+        android:id="@+id/divideLine"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:divideColor="@color/divideColorRgbE8E8E8"
+        app:layout_constraintTop_toBottomOf="@id/messageTitle"
+        app:layout_constraintLeft_toLeftOf="@id/bgView"
+        app:layout_constraintRight_toRightOf="@id/bgView"
+        app:layout_constraintBottom_toTopOf="@id/messageContent"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:divideStroke="1dp"
+        app:divideInterval="4dp"
+        app:dashedLength="8dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"/>
+
+    <TextView
+        android:id="@+id/messageTitle"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:text="订单发货"
+        android:textColor="@color/colorBlockRgb191919"
+        android:textSize="@dimen/textSize15"
+        android:gravity="center_vertical"
+        app:layout_constraintTop_toTopOf="@id/bgView"
+        app:layout_constraintBottom_toTopOf="@id/divideLine"
+        app:layout_constraintLeft_toLeftOf="@id/divideLine"
+        app:layout_constraintRight_toRightOf="@id/bgView"
+        />
+
+    <TextView
+        android:id="@+id/messageContent"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容"
+        android:textSize="@dimen/textSize13"
+        android:textColor="@color/colorBlockRgb555555"
+        android:lineSpacingMultiplier="1.2"
+        app:layout_constraintLeft_toLeftOf="@id/divideLine"
+        app:layout_constraintRight_toRightOf="@id/divideLine"
+        app:layout_constraintTop_toBottomOf="@id/divideLine"
+        app:layout_constraintBottom_toBottomOf="@id/bgView"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="15dp"
+        />
+
+
+
+</android.support.constraint.ConstraintLayout>

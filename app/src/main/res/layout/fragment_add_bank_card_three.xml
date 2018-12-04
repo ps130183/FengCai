@@ -1,0 +1,98 @@
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.wzdq.fengcai.module.mine.account.bank.AddBankCardThreeFragment">
+
+    <TextView
+        android:id="@+id/hint"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="请输入手机136****2345收到的短信验证码"
+        android:textColor="@color/colorBlockRgb555555"
+        android:textSize="@dimen/textSize14"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/bgView"
+        android:layout_margin="15dp"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_constraintVertical_bias="0"/>
+
+
+    <View
+        android:id="@+id/bgView"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:background="@color/colorWhite"
+        app:layout_constraintTop_toBottomOf="@+id/hint"
+        app:layout_constraintBottom_toTopOf="@+id/nextStep"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+
+        />
+
+    <com.wzdq.fengcai.view.MTextView
+        android:id="@+id/sendVerificationCode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="获取验证码"
+        android:padding="10dp"
+        app:afterSendText="重新获取"
+        app:countDownTime="60"
+        android:textColor="@color/colorBlockRgb242424"
+        app:layout_constraintTop_toTopOf="@+id/bgView"
+        app:layout_constraintBottom_toBottomOf="@+id/bgView"
+        app:layout_constraintRight_toRightOf="@+id/bgView"
+        app:layout_constraintLeft_toLeftOf="@+id/bgView"
+        app:layout_constraintHorizontal_bias="1"
+        android:layout_marginRight="15dp"/>
+
+    <View
+        android:id="@+id/divideLine"
+        android:layout_width="1dp"
+        android:layout_height="0dp"
+        android:background="@color/divide_color"
+        app:layout_constraintRight_toLeftOf="@+id/sendVerificationCode"
+        app:layout_constraintTop_toTopOf="@+id/bgView"
+        app:layout_constraintBottom_toBottomOf="@+id/bgView"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"/>
+
+    <EditText
+        android:id="@+id/smsCode"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="@+id/bgView"
+        app:layout_constraintRight_toLeftOf="@+id/divideLine"
+        app:layout_constraintTop_toTopOf="@+id/bgView"
+        app:layout_constraintBottom_toBottomOf="@+id/bgView"
+        android:background="@color/transparent"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="10dp"
+        android:hint="短信验证码"
+        android:textSize="@dimen/textSize14"
+        android:lines="1"
+        android:inputType="number"
+        android:maxLength="6"
+        android:textColor="@color/colorBlockRgbACAEBA"/>
+
+    <Button
+        android:id="@+id/nextStep"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="完成"
+        android:textColor="@color/white"
+        android:textSize="@dimen/textSize16"
+        android:background="@drawable/selector_button_corners_20"
+        android:layout_margin="@dimen/viewSpace16"
+        app:layout_constraintTop_toBottomOf="@+id/bgView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:enabled="false"
+        />
+
+</android.support.constraint.ConstraintLayout>

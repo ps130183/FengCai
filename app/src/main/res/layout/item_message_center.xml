@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="90dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginTop="15dp"
+    android:background="@color/colorWhite">
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@color/divide_color"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+    <View
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@color/divide_color"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <com.ps.glidelib.GlideImageView
+        android:id="@+id/messageTypeIcon"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@mipmap/icon_message_type_convert"
+        app:siv_shape_type="circle"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="15dp"
+
+        />
+
+    <com.ruffian.library.widget.RTextView
+        android:id="@+id/upToDateMessageDot"
+        android:layout_width="8dp"
+        android:layout_height="8dp"
+        app:background_normal="#F91413"
+        app:corner_radius="4dp"
+        app:layout_constraintCircleAngle="45"
+        app:layout_constraintCircleRadius="26dp"
+        app:layout_constraintCircle="@id/messageTypeIcon"
+        />
+
+
+    <TextView
+        android:id="@+id/messageTypeName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/textSize15"
+        android:textColor="@color/colorBlockRgb191919"
+        android:text="账户消息"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/messageTypeIcon"
+        app:layout_constraintBottom_toTopOf="@id/upToDateMessage"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="15dp"/>
+
+    <TextView
+        android:id="@+id/upToDateMessage"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/textSize13"
+        android:textColor="@color/colorBlockRgbAAAAAA"
+        android:text="暂无新消息暂无新消息暂无新消息暂无新消息暂无新消息暂无新消息暂无新消息暂无新消息暂无新消息暂无新消息"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/messageTypeName"
+        app:layout_constraintLeft_toRightOf="@id/messageTypeIcon"
+        app:layout_constraintRight_toRightOf="@id/messageTypeName"
+        android:layout_marginTop="3dp"
+        android:layout_marginLeft="15dp"
+        android:lines="1"
+        android:inputType="text"
+        android:ellipsize="end"/>
+</android.support.constraint.ConstraintLayout>

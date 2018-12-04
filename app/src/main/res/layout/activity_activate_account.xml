@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.wzdq.fengcai.module.mine.setting.BindPhoneActivity">
+
+    <View
+        android:id="@+id/bgView"
+        android:layout_width="0dp"
+        android:layout_height="250dp"
+        android:background="@color/colorWhite"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="15dp"/>
+
+
+    <TextView
+        android:id="@+id/account"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="账        号"
+        android:textColor="@color/colorBlockRgb242424"
+        android:textSize="15sp"
+        app:layout_constraintLeft_toLeftOf="@id/phoneHint"
+        app:layout_constraintRight_toRightOf="@id/bgView"
+        app:layout_constraintTop_toTopOf="@id/bgView"
+        app:layout_constraintBottom_toTopOf="@id/divideLine4"
+        app:layout_constraintHorizontal_bias="0"
+        />
+
+
+    <EditText
+        android:id="@+id/inputAccount"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="请输入会员账号"
+        android:textColor="@color/colorBlockRgb242424"
+        android:textSize="@dimen/textSize14"
+        android:background="@color/transparent"
+        app:layout_constraintLeft_toLeftOf="@id/inputPhone"
+        app:layout_constraintBaseline_toBaselineOf="@id/account"
+        app:layout_constraintRight_toRightOf="@id/bgView"
+        android:layout_marginRight="15dp"
+        style="@style/singleLine"/>
+
+
+    <TextView
+        android:id="@+id/phoneHint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="手机号码"
+        android:textColor="@color/colorBlockRgb242424"
+        android:textSize="15sp"
+        app:layout_constraintLeft_toLeftOf="@id/divideLine"
+        app:layout_constraintRight_toRightOf="@id/bgView"
+        app:layout_constraintTop_toTopOf="@id/divideLine4"
+        app:layout_constraintBottom_toTopOf="@id/divideLine"
+        app:layout_constraintHorizontal_bias="0"
+        android:gravity="center_vertical"
+        />
+
+    <com.wzdq.fengcai.view.MTextView
+        android:id="@+id/sendCode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="发送验证码"
+        app:afterSendText="重新发送"
+        android:textColor="@color/colorAccent"
+        app:layout_constraintBaseline_toBaselineOf="@id/phoneHint"
+        app:layout_constraintRight_toRightOf="@id/bgView"
+        android:layout_marginRight="15dp"/>
+
+    <EditText
+        android:id="@+id/inputPhone"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="请输入绑定手机号"
+        android:textColor="@color/colorBlockRgb242424"
+        android:textSize="@dimen/textSize14"
+        android:background="@color/transparent"
+        app:layout_constraintLeft_toRightOf="@id/barrier"
+        app:layout_constraintBaseline_toBaselineOf="@id/phoneHint"
+        app:layout_constraintRight_toLeftOf="@id/divideLine1"
+        android:layout_marginRight="15dp"
+        style="@style/EditTextInputPhone"
+        android:layout_marginLeft="15dp"/>
+
+    <View
+        android:id="@+id/divideLine1"
+        android:layout_width="1dp"
+        android:layout_height="0dp"
+        android:background="@color/divide_color"
+        app:layout_constraintTop_toTopOf="@id/divideLine4"
+        app:layout_constraintBottom_toBottomOf="@id/divideLine"
+        app:layout_constraintLeft_toRightOf="@+id/phoneHint"
+        app:layout_constraintRight_toLeftOf="@id/sendCode"
+        app:layout_constraintHorizontal_bias="1"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="15dp"/>
+
+    <com.wzdq.fengcai.view.DivideLine
+        android:id="@+id/divideLine4"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        app:divideColor="@color/divide_color"
+        app:divideStroke="1dp"
+        app:layout_constraintLeft_toLeftOf="@id/bgView"
+        app:layout_constraintRight_toRightOf="@id/bgView"
+        app:layout_constraintTop_toTopOf="@id/bgView"
+        app:layout_constraintBottom_toTopOf="@id/divideLine"
+        android:layout_marginLeft="15dp"/>
+
+    <com.wzdq.fengcai.view.DivideLine
+        android:id="@+id/divideLine"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        app:divideStroke="1dp"
+        app:divideColor="@color/divide_color"
+        app:layout_constraintLeft_toLeftOf="@id/bgView"
+        app:layout_constraintRight_toRightOf="@id/bgView"
+        app:layout_constraintTop_toBottomOf="@id/divideLine4"
+        app:layout_constraintBottom_toTopOf="@id/divideLine2"
+        android:layout_marginLeft="15dp"/>
+
+    <com.wzdq.fengcai.view.DivideLine
+        android:id="@+id/divideLine2"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        app:divideStroke="1dp"
+        app:divideColor="@color/divide_color"
+        app:layout_constraintLeft_toLeftOf="@id/bgView"
+        app:layout_constraintRight_toRightOf="@id/bgView"
+        app:layout_constraintTop_toBottomOf="@id/divideLine"
+        app:layout_constraintBottom_toTopOf="@id/divideLine3"
+        android:layout_marginLeft="15dp"/>
+
+    <com.wzdq.fengcai.view.DivideLine
+        android:id="@+id/divideLine3"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        app:divideStroke="1dp"
+        app:divideColor="@color/divide_color"
+        app:layout_constraintLeft_toLeftOf="@id/bgView"
+        app:layout_constraintRight_toRightOf="@id/bgView"
+        app:layout_constraintTop_toBottomOf="@id/divideLine2"
+        app:layout_constraintBottom_toBottomOf="@id/bgView"
+        android:layout_marginLeft="15dp"/>
+
+
+
+    <TextView
+        android:id="@+id/codeHint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="验  证  码"
+        android:textColor="@color/colorBlockRgb242424"
+        android:textSize="15sp"
+        app:layout_constraintLeft_toLeftOf="@id/phoneHint"
+        app:layout_constraintRight_toRightOf="@id/bgView"
+        app:layout_constraintTop_toBottomOf="@id/divideLine"
+        app:layout_constraintBottom_toTopOf="@id/divideLine2"
+        app:layout_constraintHorizontal_bias="0"
+        />
+
+
+    <EditText
+        android:id="@+id/inputCode"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="请输入验证码"
+        android:textColor="@color/colorBlockRgb242424"
+        android:textSize="@dimen/textSize14"
+        android:background="@color/transparent"
+        app:layout_constraintLeft_toLeftOf="@id/inputPhone"
+        app:layout_constraintBaseline_toBaselineOf="@id/codeHint"
+        app:layout_constraintRight_toRightOf="@id/bgView"
+        android:layout_marginRight="15dp"
+        style="@style/EditTextInputSMSCode"/>
+
+    <TextView
+        android:id="@+id/newPasswordHint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="登录密码"
+        android:textColor="@color/colorBlockRgb242424"
+        android:textSize="15sp"
+        app:layout_constraintLeft_toLeftOf="@id/phoneHint"
+        app:layout_constraintRight_toRightOf="@id/bgView"
+        app:layout_constraintTop_toBottomOf="@id/divideLine2"
+        app:layout_constraintBottom_toTopOf="@id/divideLine3"
+        app:layout_constraintHorizontal_bias="0"
+        />
+
+
+    <EditText
+        android:id="@+id/inputNewPassword"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="请设置登录密码"
+        android:textColor="@color/colorBlockRgb242424"
+        android:textSize="@dimen/textSize14"
+        android:background="@color/transparent"
+        app:layout_constraintLeft_toLeftOf="@id/inputPhone"
+        app:layout_constraintBaseline_toBaselineOf="@id/newPasswordHint"
+        app:layout_constraintRight_toRightOf="@id/bgView"
+        android:layout_marginRight="15dp"
+        style="@style/singleLine"/>
+
+    <TextView
+        android:id="@+id/doubleNewPasswordHint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="交易密码"
+        android:textColor="@color/colorBlockRgb242424"
+        android:textSize="15sp"
+        app:layout_constraintLeft_toLeftOf="@id/phoneHint"
+        app:layout_constraintRight_toRightOf="@id/bgView"
+        app:layout_constraintTop_toBottomOf="@id/divideLine3"
+        app:layout_constraintBottom_toBottomOf="@id/bgView"
+        app:layout_constraintHorizontal_bias="0"
+        />
+
+
+    <EditText
+        android:id="@+id/inputPayPassword"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="请设置交易密码"
+        android:textColor="@color/colorBlockRgb242424"
+        android:textSize="@dimen/textSize14"
+        android:background="@color/transparent"
+        app:layout_constraintLeft_toLeftOf="@id/inputPhone"
+        app:layout_constraintBaseline_toBaselineOf="@id/doubleNewPasswordHint"
+        app:layout_constraintRight_toRightOf="@id/bgView"
+        android:layout_marginRight="15dp"
+        style="@style/singleLine"/>
+
+    <android.support.constraint.Barrier
+        android:id="@+id/barrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="right"
+        app:constraint_referenced_ids="account,phoneHint,codeHint,loginPasswordHint,payPasswordHint"/>
+
+
+
+    <Button
+        android:id="@+id/btnConfirm"
+        android:layout_width="0dp"
+        android:layout_height="44dp"
+        android:text="立即激活"
+        android:textSize="@dimen/textSize16"
+        android:textColor="@color/colorWhite"
+        android:background="@drawable/selector_button_corners_20"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/bgView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.3"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:enabled="true"/>
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    tools:context="com.wzdq.fengcai.module.mine.shareholder.ApplyBecomeShareholderOfUserActivity">
+
+
+    <TextView
+        android:id="@+id/tvUserNo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="会员编号："
+        app:layout_constraintTop_toTopOf="@id/etUserNo"
+        app:layout_constraintBottom_toBottomOf="@id/etUserNo"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="15dp"
+        />
+
+    <EditText
+        android:id="@+id/etUserNo"
+        android:layout_width="0dp"
+        style="@style/EditTextInput"
+        app:layout_constraintLeft_toRightOf="@id/tvUserNo"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="15dp"
+        android:textSize="@dimen/textSize14"
+        android:textColor="@color/colorBlockRgb333333"
+        android:hint="请填写会员编号"
+        />
+
+    <TextView
+        android:id="@+id/tvUserName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="身亲人员："
+        app:layout_constraintTop_toTopOf="@id/etUserName"
+        app:layout_constraintBottom_toBottomOf="@id/etUserName"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="15dp"
+        />
+
+    <EditText
+        android:id="@+id/etUserName"
+        android:layout_width="0dp"
+        style="@style/EditTextInput"
+        app:layout_constraintLeft_toRightOf="@id/tvUserName"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etUserNo"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="15dp"
+        android:textSize="@dimen/textSize14"
+        android:textColor="@color/colorBlockRgb333333"
+        android:hint="请填写申请人员姓名"
+        />
+
+
+    <TextView
+        android:id="@+id/tvUserPhone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="联系电话："
+        app:layout_constraintTop_toTopOf="@id/etUserPhone"
+        app:layout_constraintBottom_toBottomOf="@id/etUserPhone"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="15dp"
+        />
+
+    <EditText
+        android:id="@+id/etUserPhone"
+        android:layout_width="0dp"
+        style="@style/EditTextInput"
+        app:layout_constraintLeft_toRightOf="@id/tvUserPhone"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etUserName"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="15dp"
+        android:textSize="@dimen/textSize14"
+        android:textColor="@color/colorBlockRgb333333"
+        android:hint="请填写联系电话"
+        />
+
+    <TextView
+        android:id="@+id/tvApplyProvince"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="申请省份："
+        app:layout_constraintTop_toTopOf="@id/etApplyProvince"
+        app:layout_constraintBottom_toBottomOf="@id/etApplyProvince"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="15dp"
+        />
+
+    <EditText
+        android:id="@+id/etApplyProvince"
+        android:layout_width="0dp"
+        style="@style/EditTextInput"
+        app:layout_constraintLeft_toRightOf="@id/tvApplyProvince"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etUserPhone"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="15dp"
+        android:textSize="@dimen/textSize14"
+        android:textColor="@color/colorBlockRgb333333"
+        android:hint="申请省份"
+        />
+
+
+    <TextView
+        android:id="@+id/tvApplyCity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="城        市："
+        app:layout_constraintTop_toTopOf="@id/etApplyCity"
+        app:layout_constraintBottom_toBottomOf="@id/etApplyCity"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="15dp"
+        />
+
+    <EditText
+        android:id="@+id/etApplyCity"
+        android:layout_width="0dp"
+        style="@style/EditTextInput"
+        app:layout_constraintLeft_toRightOf="@id/tvApplyCity"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etApplyProvince"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="15dp"
+        android:textSize="@dimen/textSize14"
+        android:textColor="@color/colorBlockRgb333333"
+        android:hint="申请城市"
+        />
+
+
+    <TextView
+        android:id="@+id/tvApplyArea"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="地        区："
+        app:layout_constraintTop_toTopOf="@id/etApplyArea"
+        app:layout_constraintBottom_toBottomOf="@id/etApplyArea"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="15dp"
+        />
+
+    <EditText
+        android:id="@+id/etApplyArea"
+        android:layout_width="0dp"
+        style="@style/EditTextInput"
+        app:layout_constraintLeft_toRightOf="@id/tvApplyArea"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etApplyCity"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="15dp"
+        android:textSize="@dimen/textSize14"
+        android:textColor="@color/colorBlockRgb333333"
+        android:hint="申请地区"
+        />
+
+    <Button
+        android:id="@+id/btnSubmit"
+        android:layout_width="0dp"
+        style="@style/ConfirmButton"
+        android:text="提交"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etApplyArea"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:enabled="false"
+        />
+
+</android.support.constraint.ConstraintLayout>

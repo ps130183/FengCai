@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorWhite"
+    android:id="@id/bgView"
+    android:layout_marginTop="15dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@color/divide_color"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@color/divide_color"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <View
+        android:id="@+id/divideLine"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@color/divide_color"
+        app:layout_constraintTop_toTopOf="@id/bgView"
+        app:layout_constraintLeft_toLeftOf="@id/bgView"
+        app:layout_constraintRight_toRightOf="@id/bgView"
+        app:layout_constraintBottom_toTopOf="@id/detailContent"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_constraintVertical_bias="0"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="15dp"/>
+
+    <TextView
+        android:id="@+id/detailType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="提现:"
+        android:textSize="@dimen/textSize15"
+        android:textColor="@color/colorBlockRgb242424"
+        app:layout_constraintTop_toTopOf="@id/bgView"
+        app:layout_constraintBottom_toTopOf="@id/divideLine"
+        app:layout_constraintLeft_toLeftOf="@id/divideLine"/>
+
+    <TextView
+        android:id="@+id/detailMoney"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-3000"
+        android:textColor="@color/colorRedRgbE43E44"
+        android:textSize="@dimen/textSize18"
+        app:layout_constraintTop_toTopOf="@id/bgView"
+        app:layout_constraintBottom_toTopOf="@id/divideLine"
+        app:layout_constraintRight_toRightOf="@id/divideLine"
+        android:layout_marginRight="15dp"
+        />
+
+    <TextView
+        android:id="@+id/detailContent"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="交易时间：2018-09-92\n
+提现到：工商银行（0000）宋宝杰"
+        android:textSize="@dimen/textSize13"
+        android:textColor="@color/colorBlockRgb888888"
+        android:lineSpacingMultiplier="1.4"
+        app:layout_constraintTop_toBottomOf="@id/divideLine"
+        app:layout_constraintLeft_toLeftOf="@id/divideLine"
+        app:layout_constraintRight_toRightOf="@id/bgView"
+        app:layout_constraintBottom_toBottomOf="@id/bgView"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        />
+
+</android.support.constraint.ConstraintLayout>

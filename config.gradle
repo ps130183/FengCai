@@ -1,0 +1,125 @@
+ext {
+    android = [
+            compileSdkVersion: 27,
+            buildToolsVersion: "27.0.3",
+            minSdkVersion    : 16,
+            targetSdkVersion : 27,
+            versionCode      : 1,
+            versionName      : "1.0.0"
+    ]
+
+    dependencies = [
+            //Android 内部
+            "appcompat-v7"     : "com.android.support:appcompat-v7:27+",
+            "support-v4" : "com.android.support:support-v4:27.+",
+            "constraint-layout": "com.android.support.constraint:constraint-layout:1.1.3",
+
+            //material Design 5.0新特性
+            "cardview-v7" : "com.android.support:cardview-v7:27+",
+            "design" : "com.android.support:design:27+",
+            "material" : 'com.github.rey5137:material:1.2.4',
+
+            //recyclerView
+            "recyclerview-v7"     : "com.android.support:recyclerview-v7:27.+",
+            "swipelayout" : "com.daimajia.swipelayout:library:1.2.0@aar",
+            "xrefreshview" : "com.huxq17.xrefreshview:xrefreshview:3.6.9",
+            //自己的recyclerView
+            "MRecycler" : "com.github.ps130183:MRecycler:1.0",
+            //层级recyclerView
+            "expandablerecycleradapter" : "com.zaihuishou:expandablerecycleradapter:1.0.3",
+            //recyclerView 分割线
+            "flexibledivider" : "com.yqritc:recyclerview-flexibledivider:1.4.0",
+
+            //页面侧滑
+            "swipelayout" : "com.daimajia.swipelayout:library:1.2.0@aar",
+
+            //android Test
+            "androidTestImplementation-runner" : "com.android.support.test:runner:1.0.1",
+            "androidTestImplementation-espresso-core" : "com.android.support.test.espresso:espresso-core:3.0.1",
+            //Android 内部
+
+
+            //glide
+            "glide" : "com.github.bumptech.glide:glide:4.4.0",
+            "glideVersion" : "com.github.bumptech.glide:compiler:4.4.0",
+            "okhttp3-integration" : "com.github.bumptech.glide:okhttp3-integration:4.5.0",
+            "glide-transformations" : 'jp.wasabeef:glide-transformations:3.0.1',
+            // If you want to use the GPU Filters
+            "gpuimage-library" : 'jp.co.cyberagent.android.gpuimage:gpuimage-library:1.4.1',
+
+            //动画类
+            "nineoldandroids" : "com.nineoldandroids:library:2.4.0",
+
+            //RxJava + retrofit + okhttp
+            "rxjava" : "io.reactivex.rxjava2:rxjava:2.1.7",
+            "rxandroid" : "io.reactivex.rxjava2:rxandroid:2.0.1",
+            "retrofit" : "com.squareup.retrofit2:retrofit:2.3.0",
+            "converter-gson" : "com.squareup.retrofit2:converter-gson:2.3.0",
+            "converter-scalars" : "com.squareup.retrofit2:converter-scalars:2.3.0",
+            "adapter-rxjava2" : "com.squareup.retrofit2:adapter-rxjava2:2.3.0",
+            "okhttp" : "com.squareup.okhttp3:okhttp:3.9.0",
+            "logging-interceptor" : "com.squareup.okhttp3:logging-interceptor:3.9.0",
+            //文件下载
+            "RetrofitOfRxJava" : "com.github.JiangAndroidwork:RetrofitOfRxJava:v2.3",
+
+            //viewPager
+            "magic-viewpager" : "com.zhy:magic-viewpager:1.0.1",
+
+            //工具类
+            "utilcode" : "com.blankj:utilcode:1.22.0",
+            "butterknife" : 'com.jakewharton:butterknife:8.8.1',
+            "butterknife-compiler" : 'com.jakewharton:butterknife-compiler:8.8.1',
+
+
+            //photoView
+            "photoView" : "com.github.chrisbanes:PhotoView:2.0.0",
+
+            //弹出提示框
+            "DialogUtil" : "com.github.hss01248:DialogUtil:1.2.6",
+
+            //eventBus
+            "eventBus" : "org.greenrobot:eventbus:3.1.1",
+
+            //权限申请
+            "permissiongen" : "com.lovedise:permissiongen:0.0.6",
+
+            //解决65536问题
+            "multidex" : "com.android.support:multidex:1.0.1",
+
+            //对textView的一些常用的 功能的封装
+            //RWidgetHelper 是 RTextView的升级版 包括更多的控件
+            "RWidgetHelper" : 'com.ruffian.library:RWidgetHelper:1.0.4',
+            "RTextView" : "com.ruffian.library:RTextView:1.0.3",
+
+            //流式布局，标签
+            "flowLayout" : "com.hyman:flowlayout-lib:1.1.2",
+            //视频播放
+            "jiaozivideoplayer" : "cn.jzvd:jiaozivideoplayer:6.1.1",
+            //对PopupWindow常用API的简单封装，几行代码就搞定PopupWindow弹窗，使用Builder模式，链式调用
+            "CustomPopwindow" : "com.github.pinguo-zhouwei:CustomPopwindow:2.1.1",
+            //日历控件
+            "calendarview" : "com.haibin:calendarview:3.2.0",
+            //圆角imageView
+            "roundedimageview" : "com.makeramen:roundedimageview:2.3.0",
+
+            //跑马灯
+            "marqueelibrary" : "com.gongwen:marqueelibrary:1.1.3",
+
+            //汉子转拼音
+            "jpinyin" : "com.github.SilenceDut:jpinyin:v1.0",
+
+            //验证码输入框
+            "VerificationCodeInput" : "com.github.liuguangli:VerificationCodeInput:1.3",
+
+            //数据库管理工具
+            "greendao" : "org.greenrobot:greendao:3.2.2",
+            "android-database-sqlcipher" : "net.zetetic:android-database-sqlcipher:3.5.2",
+
+            //功能引导
+            "guider" : "com.github.huburt-Hu:NewbieGuide:v2.4.0",
+
+            //激光推送
+            "jpush" : "cn.jiguang.sdk:jpush:3.1.1",  // 此处以JPush 3.1.1 版本为例。
+            "jcore" : "cn.jiguang.sdk:jcore:1.1.9"  // 此处以JCore 1.1.9 版本为例。
+    ]
+}

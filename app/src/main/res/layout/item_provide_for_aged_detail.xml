@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="90dp"
+    android:background="@color/colorWhite"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.wzdq.fengcai.view.MTextView
+        android:id="@+id/month"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:text="10月"
+        android:textColor="@color/colorBlockRgb242424"
+        android:textSize="@dimen/textSize14"
+        android:gravity="center"
+        app:backgroundType="circle"
+        app:backgroundColor="@color/colorBlockRgbEEEEEE"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="22dp"/>
+
+    <View
+        android:id="@+id/divideLine"
+        android:layout_width="1dp"
+        android:layout_height="40dp"
+        android:background="@color/colorBlockRgbAAAAAA"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/month"
+        android:layout_marginLeft="20dp"/>
+
+    <TextView
+        android:id="@+id/moneyHint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="补贴金额："
+        android:textSize="@dimen/textSize14"
+        android:textColor="@color/colorBlockRgb555555"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/divideLine"
+        app:layout_constraintBottom_toTopOf="@id/timeHint"
+        android:layout_marginLeft="30dp"/>
+
+    <TextView
+        android:id="@+id/timeHint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="交易时间："
+        android:textSize="@dimen/textSize14"
+        android:textColor="@color/colorBlockRgb555555"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="@id/moneyHint"
+        app:layout_constraintTop_toBottomOf="@id/moneyHint"/>
+
+    <android.support.constraint.Barrier
+        android:id="@+id/barrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="right"
+        app:constraint_referenced_ids="moneyHint,timeHint"
+        />
+
+    <TextView
+        android:id="@+id/money"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="5000"
+        android:textSize="@dimen/textSize14"
+        android:textColor="@color/colorRedRgbE43E44"
+        app:layout_constraintTop_toTopOf="@id/moneyHint"
+        app:layout_constraintLeft_toRightOf="@id/barrier"
+        app:layout_constraintBottom_toBottomOf="@id/moneyHint"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintHorizontal_bias="0.1"
+        />
+
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2018/11/09"
+        android:textSize="@dimen/textSize14"
+        android:textColor="@color/colorBlockRgb555555"
+        app:layout_constraintTop_toTopOf="@id/timeHint"
+        app:layout_constraintLeft_toLeftOf="@id/money"
+        app:layout_constraintBottom_toBottomOf="@id/timeHint"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@color/divide_color"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"/>
+
+</android.support.constraint.ConstraintLayout>

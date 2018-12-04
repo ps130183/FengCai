@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    tools:context="com.wzdq.fengcai.module.login.LoginActivity">
+
+    <com.wzdq.fengcai.view.DivideLine
+        android:id="@+id/divideLine"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/divideLine2"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_constraintVertical_bias="0.22"
+        app:divideStroke="1dp"
+        app:divideColor="@color/divideColorRgbE8E8E8"/>
+    
+
+    <com.ruffian.library.widget.REditText
+        android:id="@+id/etAccount"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="@id/divideLine"
+        app:layout_constraintRight_toRightOf="@id/divideLine"
+        app:layout_constraintBottom_toTopOf="@+id/divideLine"
+        app:icon_src_normal="@mipmap/icon_login_account"
+        app:icon_width="24dp"
+        app:icon_height="24dp"
+        android:hint="请输入会员账号"
+        android:textColor="@color/colorBlockRgb191919"
+        android:textSize="@dimen/textSize14"
+        android:drawablePadding="20dp"/>
+
+
+    <com.wzdq.fengcai.view.DivideLine
+        android:id="@+id/divideLine2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/divideLine"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="68dp"
+        app:divideStroke="1dp"
+        app:divideColor="@color/divideColorRgbE8E8E8"/>
+
+    <com.ruffian.library.widget.REditText
+        android:id="@+id/etPassword"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="@id/divideLine2"
+        app:layout_constraintRight_toRightOf="@id/divideLine2"
+        app:layout_constraintBottom_toTopOf="@+id/divideLine2"
+        app:icon_src_normal="@mipmap/icon_login_password"
+        app:icon_width="24dp"
+        app:icon_height="24dp"
+        android:hint="请输入登录密码"
+        android:inputType="textPassword"
+        android:textColor="@color/colorBlockRgb191919"
+        android:textSize="@dimen/textSize14"
+        android:drawablePadding="20dp"/>
+
+    <TextView
+        android:id="@+id/forgetPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="忘记密码?"
+        android:textColor="@color/colorAccent"
+        android:textSize="@dimen/textSize13"
+        app:layout_constraintRight_toRightOf="@id/divideLine2"
+        app:layout_constraintTop_toBottomOf="@id/divideLine2"
+        android:layout_marginTop="15dp"
+        />
+
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="0dp"
+        android:layout_height="44dp"
+        android:text="登录"
+        android:textSize="@dimen/textSize18"
+        android:textColor="@color/colorWhite"
+        android:background="@drawable/selector_button_corners_20"
+        app:layout_constraintTop_toBottomOf="@id/divideLine2"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginTop="103dp"
+        android:enabled="false"/>
+
+    <TextView
+        android:id="@+id/activateAccount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="激活账户>>"
+        android:textColor="#035ADe"
+        android:textSize="@dimen/textSize14"
+        app:layout_constraintTop_toBottomOf="@id/btnLogin"
+        app:layout_constraintLeft_toLeftOf="@id/btnLogin"
+        app:layout_constraintRight_toRightOf="@id/btnLogin"
+        android:layout_marginTop="30dp"/>
+
+</android.support.constraint.ConstraintLayout>

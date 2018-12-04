@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.wzdq.fengcai.MainActivity">
+
+    <FrameLayout
+        android:id="@+id/container"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_above="@+id/tabLayout"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/divideLine">
+
+    </FrameLayout>
+
+    <com.wzdq.fengcai.view.DivideLine
+        android:id="@+id/divideLine"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:divideColor="@color/divideColorRgbE8E8E8"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/tabLayout"
+        app:layout_constraintTop_toBottomOf="@id/container"
+        />
+
+    <com.flyco.tablayout.CommonTabLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="0dp"
+        android:layout_height="49dp"
+        android:layout_alignParentBottom="true"
+        android:background="#ffffff"
+        app:tl_iconHeight="30dp"
+        app:tl_iconWidth="30dp"
+        app:tl_indicator_height="0dp"
+        app:tl_textsize="10sp"
+        app:tl_textSelectColor="#FFB604"
+        app:tl_textUnselectColor="#888888"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divideLine">
+
+    </com.flyco.tablayout.CommonTabLayout>
+
+
+</android.support.constraint.ConstraintLayout>

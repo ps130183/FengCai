@@ -1,0 +1,92 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+
+    <!--  ToolBar menu 的弹出框的主题  -->
+    <style name="PopupMenu" parent="ThemeOverlay.AppCompat.Light">
+        <item name="android:colorBackground">@color/colorAccent</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="overlapAnchor">false</item>
+    </style>
+
+    <style name="Dialog" parent="@android:style/Theme.Holo.Dialog">
+        <item name="android:windowSoftInputMode">stateHidden|adjustResize</item>
+        <!-- 边框 -->
+        <item name="android:windowFrame">@null</item>
+        <!-- 是否浮现在activity之上 -->
+        <item name="android:windowIsFloating">true</item>
+        <!-- 半透明 -->
+        <item name="android:windowIsTranslucent">false</item>
+        <!-- 无标题 -->
+        <item name="android:windowNoTitle">true</item>
+        <!-- 背景透明 -->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!-- 模糊 -->
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+
+
+    <!--<style name="AlertDialog" parent="@android:style/Theme.Dialog">-->
+        <!--&lt;!&ndash;Dialog的windowFrame框为无&ndash;&gt;-->
+        <!--<item name="android:windowFrame">@null</item>-->
+        <!--&lt;!&ndash;是否浮现在activity之上&ndash;&gt;-->
+        <!--<item name="android:windowIsFloating">true</item>-->
+        <!--&lt;!&ndash;是否半透明&ndash;&gt;-->
+        <!--<item name="android:windowIsTranslucent">true</item>-->
+        <!--&lt;!&ndash;是否显示title&ndash;&gt;-->
+        <!--<item name="android:windowNoTitle">false</item>-->
+        <!--&lt;!&ndash;设置dialog的背景，（#00000000）&ndash;&gt;-->
+        <!--<item name="android:background">@android:color/transparent</item>-->
+        <!--&lt;!&ndash;显示区域背景是否透明，（#00000000）&ndash;&gt;-->
+        <!--<item name="android:windowBackground">@android:color/transparent</item>-->
+        <!--&lt;!&ndash;就是用来控制灰度的值，当为1时，界面除了我们的dialog内容是高亮显示的，dialog以外的区域是黑色的，完全看不到其他内容，系统的默认值是0.5&ndash;&gt;-->
+        <!--<item name="android:backgroundDimAmount">0.5</item>-->
+        <!--&lt;!&ndash;显示区域以外是否使用黑色半透明背景&ndash;&gt;-->
+        <!--<item name="android:backgroundDimEnabled">true</item>-->
+    <!--</style>-->
+
+    <style name="DivideLine">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">#efeff4</item>
+    </style>
+
+    <style name="EditTextInput">
+        <item name="android:background">@drawable/shape_edittext_bg_corner4</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:textColor">@color/colorBlockRgb333333</item>
+        <item name="android:textSize">@dimen/textSize14</item>
+        <item name="android:padding">8dp</item>
+    </style>
+
+    <style name="singleLine">
+        <item name="android:inputType">text</item>
+        <item name="android:lines">1</item>
+    </style>
+
+    <style name="EditTextInputPhone">
+        <item name="android:inputType">phone</item>
+        <item name="android:maxLength">11</item>
+        <item name="android:lines">1</item>
+    </style>
+
+    <style name="EditTextInputSMSCode">
+        <item name="android:inputType">phone</item>
+        <item name="android:maxLength">6</item>
+        <item name="android:lines">1</item>
+    </style>
+    
+    <style name="ConfirmButton">
+        <item name="android:layout_height">44dp</item>
+        <item name="android:background">@drawable/selector_button_corners_20</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:textSize">@dimen/textSize18</item>
+    </style>
+</resources>

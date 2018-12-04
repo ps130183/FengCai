@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.wzdq.fengcai.module.mine.account.withdraw.WithdrawDepositActivity">
+
+    <View
+        android:id="@+id/bgView"
+        android:layout_width="0dp"
+        android:layout_height="250dp"
+        android:layout_marginTop="15dp"
+        android:background="@color/colorWhite"
+        app:layout_constraintBottom_toTopOf="@+id/btnWithdraw"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+
+    <TextView
+        android:id="@+id/withdrawHint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="提现至"
+        android:textColor="@color/colorBlockRgb666666"
+        android:textSize="@dimen/textSize14"
+        app:layout_constraintTop_toTopOf="@+id/bgView"
+        app:layout_constraintBottom_toTopOf="@+id/divideLine"
+        app:layout_constraintLeft_toLeftOf="@+id/bgView"
+        app:layout_constraintRight_toLeftOf="@+id/bankCard"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        android:layout_marginLeft="15dp"
+        />
+
+    <com.ruffian.library.widget.RTextView
+        android:id="@+id/bankCard"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="中国工商银行"
+        android:textSize="@dimen/textSize14"
+        android:textColor="@color/colorBlockRgb191919"
+        app:layout_constraintTop_toTopOf="@+id/withdrawHint"
+        app:layout_constraintBottom_toBottomOf="@+id/withdrawHint"
+        app:layout_constraintRight_toRightOf="@+id/bgView"
+        app:layout_constraintLeft_toRightOf="@+id/withdrawHint"
+        android:layout_marginRight="15dp"
+        android:gravity="center_vertical|right"
+        android:drawablePadding="8dp"
+        app:icon_src_normal="@mipmap/icon_arrow_right"
+        app:icon_width="18dp"
+        app:icon_height="18dp"
+        app:icon_direction="right"
+        android:onClick="selectBankCard"
+        />
+
+    <View
+        android:id="@+id/divideLine"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@color/divide_color"
+        app:layout_constraintTop_toTopOf="@+id/bgView"
+        app:layout_constraintLeft_toLeftOf="@+id/bgView"
+        app:layout_constraintRight_toRightOf="@+id/bgView"
+        app:layout_constraintBottom_toTopOf="@+id/withdrawMoneyHint"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="15dp"/>
+
+
+    <TextView
+        android:id="@+id/withdrawMoneyHint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="提现金额"
+        android:textColor="@color/colorBlockRgb666666"
+        android:textSize="@dimen/textSize14"
+        app:layout_constraintLeft_toLeftOf="@+id/divideLine"
+        app:layout_constraintTop_toBottomOf="@+id/divideLine"
+        app:layout_constraintBottom_toTopOf="@+id/withdrawMoney"
+        app:layout_constraintRight_toRightOf="@+id/bgView"
+        app:layout_constraintHorizontal_bias="0"
+        android:layout_marginTop="26dp"/>
+
+    <TextView
+        android:id="@+id/withdrawMoney"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="¥"
+        android:textColor="@color/colorBlockRgb191919"
+        android:textSize="34dp"
+        app:layout_constraintLeft_toLeftOf="@+id/withdrawMoneyHint"
+        app:layout_constraintTop_toBottomOf="@+id/withdrawMoneyHint"
+        app:layout_constraintBottom_toTopOf="@+id/divideLine2"
+        app:layout_constraintRight_toRightOf="@+id/bgView"
+        app:layout_constraintHorizontal_bias="0"
+        android:layout_marginTop="50dp"/>
+
+    <EditText
+        android:id="@+id/etWithdrawMoney"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@+id/withdrawMoney"
+        app:layout_constraintBottom_toBottomOf="@+id/withdrawMoney"
+        app:layout_constraintRight_toRightOf="@id/bgView"
+        app:layout_constraintLeft_toRightOf="@+id/withdrawMoney"
+        android:background="@color/transparent"
+        android:textColor="@color/colorBlockRgb191919"
+        android:textSize="34dp"
+        android:text=""
+        android:inputType="numberDecimal"
+        android:lines="1"
+        />
+
+    <View
+        android:id="@+id/divideLine2"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@color/divide_color"
+        app:layout_constraintBottom_toBottomOf="@+id/bgView"
+        app:layout_constraintLeft_toLeftOf="@+id/bgView"
+        app:layout_constraintRight_toRightOf="@+id/bgView"
+        app:layout_constraintTop_toBottomOf="@+id/withdrawMoney"
+        android:layout_marginBottom="50dp"
+        android:layout_marginLeft="15dp"/>
+
+    <TextView
+        android:id="@+id/canWithdrawMoney"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="可提现金额50000"
+        app:layout_constraintTop_toTopOf="@+id/divideLine2"
+        app:layout_constraintBottom_toBottomOf="@+id/bgView"
+        app:layout_constraintRight_toLeftOf="@+id/allWithdraw"
+        app:layout_constraintLeft_toLeftOf="@id/divideLine2"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        />
+
+    <TextView
+        android:id="@+id/allWithdraw"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="全部提现"
+        android:textSize="@dimen/textSize14"
+        android:textColor="@color/colorAccent"
+        app:layout_constraintTop_toTopOf="@id/canWithdrawMoney"
+        app:layout_constraintBottom_toBottomOf="@+id/canWithdrawMoney"
+        app:layout_constraintRight_toRightOf="@id/bgView"
+        app:layout_constraintLeft_toRightOf="@id/canWithdrawMoney"
+        android:layout_marginRight="15dp"/>
+
+    <Button
+        android:id="@+id/btnWithdraw"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/selector_button_corners_20"
+        android:onClick="submitWithdraw"
+        android:text="提现"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bgView"
+        android:enabled="false"/>
+
+</android.support.constraint.ConstraintLayout>
